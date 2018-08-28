@@ -12,20 +12,25 @@ final class Solution {
          */
     }
     /**
-     * { function_description }
+     * { main function }
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /*
-    Need to write the power function and print the output.
-    */
+    /**
+     * { Power Function }
+     *
+     * @param      b     { base }
+     * @param      e     { exponent }
+     *
+     * @return     { description_of_the_return_value }
+     */
     static long power(final int b, final int e) {
         if (e == 0) {
             return 1;
