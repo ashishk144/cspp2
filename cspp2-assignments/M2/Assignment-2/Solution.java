@@ -1,8 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 /**
-*
- *@param args Writing a program for finding square roots of quadratic equations*/
+Writing a program for finding square roots of quadratic equations*/
 public class Solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
