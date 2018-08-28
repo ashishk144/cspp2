@@ -2,11 +2,11 @@ import java.util.Scanner;
 // import java.lang.Math;
 /**
 Writing a program for finding square roots of quadratic equations.*/
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
         /**
          * { item_description }
          */
@@ -52,3 +52,4 @@ public class Solution {
     // }
     }
 }
+
