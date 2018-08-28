@@ -14,15 +14,15 @@ public class Solution {
     /*
     Need to write the power function and print the output.
     */
-    static long power(int b, int e){
-        if (e == 0){
+    static long power(int b, int e) {
+        if (e == 0) {
             return 1;
         }
         // else if (e == 1){
         //     return b;
         // }
-        else{
-            return b * power(b, e-1);
+        else {
+            return b * power(b, e - 1);
         }
     }
 }
