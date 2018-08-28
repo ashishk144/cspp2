@@ -4,6 +4,14 @@ import java.util.Scanner;
 Writing a program for finding square roots of quadratic equations.*/
 public class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution(){
+        /**
+         * { item_description }
+         */
+    }
+    /**
      * Writing a class solution.
      *
      * @param      args  The arguments
@@ -16,7 +24,7 @@ public class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        roots(a, b, c);
     }
     /**
      * Roots of quadratic equation function.
@@ -25,7 +33,7 @@ public class Solution {
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    static void roots(final int a, final int b, final int c) {
     // System.out.println("abc");
     // System.out.println(b*b);
     // System.out.println(((b*b)-(4*a*c)));
