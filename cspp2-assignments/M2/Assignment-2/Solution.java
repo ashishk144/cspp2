@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
+/*
+Writing a program for finding square roots of quadratic equations*/
 public class Solution {
     /*
     Do not modify this main function.
