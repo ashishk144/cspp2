@@ -1,10 +1,10 @@
 import java.util.Scanner;
-import java.lang.Math;
+// import java.lang.Math;
 /**
 Writing a program for finding square roots of quadratic equations.*/
 public class Solution {
     /**
-     * Writing a class solution
+     * Writing a class solution.
      *
      * @param      args  The arguments
      */
@@ -19,17 +19,17 @@ public class Solution {
         rootsOfQuadraticEquation(a, b, c);
     }
     /**
-     * Roots of quadratic equation function
+     * Roots of quadratic equation function.
      *
      * @param      a     { parameter_description }
      * @param      b     { parameter_description }
      * @param      c     { parameter_description }
      */
-    static void rootsOfQuadraticEquation(final int a,final int b,final int c) {
+    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
     // System.out.println("abc");
     // System.out.println(b*b);
     // System.out.println(((b*b)-(4*a*c)));
-    int four = 4;
+    final int four = 4;
     if (((b * b) - (four * a * c)) >= 0) {
     double root1 = (-b + Math.sqrt(((b * b) - (four * a * c)))) / (2 * a);
     double root2 = (-b - Math.sqrt(((b * b) - (four * a * c)))) / (2 * a);
