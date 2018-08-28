@@ -3,14 +3,25 @@ import java.lang.Math;
 /**
 Writing a program for finding square roots of quadratic equations*/
 public class Solution {
+    /**
+     * Writing a class solution
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
+        /**
+         * Main Function
+         */
         Scanner scan = new Scanner(System.in);
         final int a = scan.nextInt();
         final int b = scan.nextInt();
         final int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
-    } 
+    }
     static void rootsOfQuadraticEquation(int a, int b, int c) {
+    /**
+     * Roots of quadratic equation function
+     */
     /*
     Need to write the rootsOfQuadraticEquation function and print the output.
     */
