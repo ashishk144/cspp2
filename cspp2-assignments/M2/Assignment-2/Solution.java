@@ -1,14 +1,14 @@
 import java.util.Scanner;
 import java.lang.Math;
 /**
-Writing a program for finding square roots of quadratic equations*/
+Writing a program for finding square roots of quadratic equations.*/
 public class Solution {
     /**
      * Writing a class solution
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**
          * Main Function
          */
