@@ -2,21 +2,21 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
-     * Solution
-     *
-     * @param      args  The arguments
+     * Constructs the object.
      */
     private Solution() {
         /**
-         * { item_description }
+         * Making solution private.
          */
     }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
-        /**
-         * Main Function
-         */
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -27,9 +27,6 @@ public class Solution {
     Need to write the power function and print the output.
     */
     static long power(final int b, final int e) {
-        /**
-         * Power function
-         */
         if (e == 0) {
             return 1;
         } else {
