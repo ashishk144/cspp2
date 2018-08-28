@@ -1,26 +1,16 @@
 import java.util.Scanner;
 import java.lang.Math;
-/*
-Writing a program for finding square roots of quadratic equations*/
+/**
+*
+ *@param args Writing a program for finding square roots of quadratic equations*/
 public class Solution {
-    /*
-    Do not modify this main function.
-    */
-    /**
-     * { function_description }
-     *
-     * @param      args  The arguments
-     */
     public static void main(String[] args) {
-        /**
-         * Writing the amin function
-         */
         Scanner scan = new Scanner(System.in);
         final int a = scan.nextInt();
         final int b = scan.nextInt();
         final int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
-    }
+    } 
     static void rootsOfQuadraticEquation(int a, int b, int c) {
     /*
     Need to write the rootsOfQuadraticEquation function and print the output.
