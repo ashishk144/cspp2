@@ -1,10 +1,22 @@
 import java.util.Scanner;
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-    /*
-    Do not modify this main function.
-    */
+    /**
+     * Solution
+     *
+     * @param      args  The arguments
+     */
+    private Solution() {
+        /**
+         * { item_description }
+         */
+    }
     public static void main(String[] args) {
+        /**
+         * Main Function
+         */
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -14,14 +26,13 @@ public class Solution {
     /*
     Need to write the power function and print the output.
     */
-    static long power(int b, int e) {
+    static long power(final int b, final int e) {
+        /**
+         * Power function
+         */
         if (e == 0) {
             return 1;
-        }
-        // else if (e == 1){
-        //     return b;
-        // }
-        else {
+        } else {
             return b * power(b, e - 1);
         }
     }
