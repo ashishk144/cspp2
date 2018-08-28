@@ -6,6 +6,11 @@ public class Solution {
     /*
     Do not modify this main function.
     */
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         /**
          * Writing the amin function
