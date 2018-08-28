@@ -11,7 +11,7 @@ final class Solution {
          * Making solution private.
          */
     }
-    /**
+    /**.
      * { main function }
      *
      * @param      args  The arguments
@@ -23,7 +23,7 @@ final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /**
+    /**.
      * { Power Function }
      *
      * @param      b     { base }
