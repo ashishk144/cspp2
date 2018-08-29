@@ -4,6 +4,12 @@ import java.util.Scanner;
  * Class for solution.
  */
 final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /** First.
      * Main function to call gcd
      *
@@ -17,7 +23,7 @@ final class Solution {
         // gcd(n1,n2);
         System.out.println(gcd(n1, n2));
     }
-    /**
+    /**.
      * GCD function
      *
      * @param      n1    The n 1
@@ -40,4 +46,5 @@ final class Solution {
     return 0;
     }
 }
+
 
