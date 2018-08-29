@@ -6,11 +6,11 @@ import java.util.Scanner;
     /**
      * Class for solution.
      */
-public class Solution {
-    private Solution(){
-        /**
-         * Private Solution
-         */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
     }
 /* Fill the main function to print the number of 7's between 1 to n*/
 /**.
