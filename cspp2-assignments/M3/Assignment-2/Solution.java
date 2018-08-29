@@ -7,6 +7,11 @@ import java.util.Scanner;
      * Class for solution.
      */
 public class Solution {
+    private Solution(){
+        /**
+         * Private Solution
+         */
+    }
 /* Fill the main function to print the number of 7's between 1 to n*/
 /**.
  * Main function
@@ -19,16 +24,18 @@ public class Solution {
         int count = 0;
         int temp = 0;
         int j;
+        final int seven = 7;
+        final int ten = 10;
         for (int i = 1; i <= n; i++) {
             j = i;
             while (j > 0) {
                 // System.out.println(j);
-                temp = j % 10;
+                temp = j % ten;
                 // System.out.println(temp);
-            if (temp == 7) {
+            if (temp == seven) {
                 count += 1;
             }
-            j = j / 10;
+            j = j / ten;
             }
         }
         System.out.println(count);
