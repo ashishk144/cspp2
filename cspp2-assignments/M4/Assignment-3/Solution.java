@@ -37,7 +37,7 @@ final class Solution {
             if (s == 0) {
                 l -= 1;
             } else {
-                sum += Math.pow(2 , l);
+                sum += Math.pow(l , 2);
                 l -= 1;
             }
         }
