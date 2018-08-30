@@ -22,8 +22,8 @@ final class Solution {
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				a[i][j] = sc.nextInt();
+				System.out.println(a[i][j]);
 			}
-		System.out.println(Arrays.toString(a));
 		}
 
 	}
