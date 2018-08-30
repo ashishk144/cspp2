@@ -17,7 +17,7 @@ final class Solution {
     {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for(int i = 0;i <= n; i++) {
+        for(int i = 0; i <= n; i++) {
             String s = sc.nextLine();
             String res = binaryToDecimal(s);//Write binaryToDecimal function
             System.out.println(res);
@@ -31,14 +31,15 @@ final class Solution {
      * @return     { description_of_the_return_value }
      */
     static String binaryToDecimal(final String str) {
-        System.out.println(str);
+        // System.out.println(str);
         int l = str.length()-1;
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
-            int s = Integer.parseInt(str.charAt(i)+"");
+            int s = (int)str.charAt(i);
+            // Integer.parseInt(str.charAt(i) + "")
             // System.out.println(s);
             if (s == 1) {
-                sum += Math.pow(2 , l);
+                sum += Math.pow(2 ,l);
             }
             l -= 1;
         }
