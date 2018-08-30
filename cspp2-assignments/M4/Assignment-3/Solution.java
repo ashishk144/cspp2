@@ -34,7 +34,7 @@ final class Solution {
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
             int s = (int)str.charAt(i);
-            System.out.println(s);
+            System.out.println(str.charAt(i));
             if (s == 0) {
                 l -= 1;
             } else {
