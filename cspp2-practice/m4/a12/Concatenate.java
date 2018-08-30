@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for concatenate.
  */
-class Concatenate {
+final class Concatenate {
     /**
      * { function_description }
      *
