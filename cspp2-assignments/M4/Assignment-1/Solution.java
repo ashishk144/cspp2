@@ -10,7 +10,7 @@ final class Solution {
     private Solution() {
 
     }
-    /**
+    /**.
      * Main function
      *
      * @param      args  The arguments
