@@ -1,9 +1,15 @@
 
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for solution.
  */
 final class Solution {
+    /**.
+     * Default Constructor
+     */
+    private Solution() {
+
+    }
     /**
      * Main function
      *
@@ -16,7 +22,7 @@ final class Solution {
         if (n < 1) {
             System.out.println("Array size cannot be less than 1");
         } else {
-            int [] a = new int[n];
+            int[] a = new int[n];
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
             }
