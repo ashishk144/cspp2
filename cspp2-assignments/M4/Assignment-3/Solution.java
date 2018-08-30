@@ -34,10 +34,11 @@ final class Solution {
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
             int s = (int)str.charAt(i);
+            System.out.println(s);
             if (s == 0) {
                 l -= 1;
             } else {
-                sum += Math.pow(l , 2);
+                sum += Math.pow(2 , l);
                 l -= 1;
             }
         }
