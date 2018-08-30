@@ -30,7 +30,7 @@ final class Solution {
      * @return     { description_of_the_return_value }
      */
     static String binaryToDecimal(final String str) {
-        int l = str.length();
+        int l = str.length()-1;
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
             int s = Integer.parseInt(str.charAt(i)+"");
