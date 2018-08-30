@@ -34,7 +34,7 @@ final class Solution {
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
             int s = Integer.parseInt(str.charAt(i)+"");
-            System.out.println(s);
+            // System.out.println(s);
             if (s == 1) {
                 sum += Math.pow(2 , l);
             }
