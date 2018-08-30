@@ -33,7 +33,8 @@ final class Solution {
         int l = str.length();
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
-            int s = (int)str.charAt(i);
+            int s = Integer.parseInt(str.charAt(i)+"");
+            // print(s);
             if (s == 1) {
                 sum += Math.pow(2 , l);
             }
