@@ -30,6 +30,7 @@ final class Solution {
                 int temp = a[i][j] % 100;
                 if (temp > 50) {
                     temp = 100 - temp;
+                    System.out.println(a[i][j] + ' '+ temp);
                     a[i][j] += temp;
                 }
             }
