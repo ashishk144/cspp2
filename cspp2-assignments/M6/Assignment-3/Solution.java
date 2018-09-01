@@ -29,6 +29,7 @@ final class Solution {
         for (char element : charArray) {
             if (element == oldChar) {
                 element = newChar;
+                System.out.println(element);
             }
         }
         return charArray;
