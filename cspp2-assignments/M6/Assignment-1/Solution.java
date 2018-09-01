@@ -22,8 +22,8 @@ public final class Solution {
         for (int number = 2; number <= n; number++) {
             if (number % 2 == 1) {
                 int factorcount = 0;
-                for (int compcheck = 2; compcheck <= number &&
-                    factorcount < 2; compcheck++) {
+                for (int compcheck = 2; compcheck <= number
+                    && factorcount < 2; compcheck++) {
                     if (number % compcheck == 0) {
                         factorcount += 1;
                     }
