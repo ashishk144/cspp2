@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Class for input validation.
  */
 class InputValidator {
-    String inp;
+    private String inp;
     /**
      * Constructs the object.
      *
@@ -12,7 +12,13 @@ class InputValidator {
     InputValidator(String startinp) {
         inp = startinp;
     }
+    /**
+     * function to find the length
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int length() {
+        System.out.println("Len function");
         int len = 0;
         for (char eachval:inp.toCharArray()) {
             len += 1;
@@ -25,7 +31,7 @@ class InputValidator {
      * @return     { Boolean }
      */
     public boolean validateData() {
-    	final int six = 6;
+        final int six = 6;
         if (inp.length() >= six) {
             return true;
         }
@@ -35,13 +41,13 @@ class InputValidator {
 /**.
  * Class for solution.
  */
-public class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
-	}
+    }
     /**.
      * Main function
      *
