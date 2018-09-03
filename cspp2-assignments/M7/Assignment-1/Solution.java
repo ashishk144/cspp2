@@ -9,7 +9,7 @@ class InputValidator {
      *
      * @param      startinp  The startinp
      */
-    InputValidator(String startinp) {
+    InputValidator(final String startinp) {
         inp = startinp;
     }
     /**.
