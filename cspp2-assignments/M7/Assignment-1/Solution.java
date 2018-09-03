@@ -3,8 +3,8 @@ import java.util.Scanner;
  * Class for input validation.
  */
 class InputValidator {
-    /**
-     * { var_description }
+    /**.
+     * { creating private variable string }
      */
     private String inp;
     /**
