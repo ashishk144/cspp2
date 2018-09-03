@@ -12,20 +12,7 @@ class InputValidator {
     InputValidator(String startinp) {
         inp = startinp;
     }
-    /**
-     * function to find the length
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int length() {
-        System.out.println("Len function");
-        int len = 0;
-        for (char eachval:inp.toCharArray()) {
-            len += 1;
-        }
-    return len;
-    }
-    /**
+    /**.
      * Validation method
      *
      * @return     { Boolean }
