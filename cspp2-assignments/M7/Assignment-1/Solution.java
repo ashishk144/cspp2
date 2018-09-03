@@ -9,7 +9,7 @@ class InputValidator {
      *
      * @param      startinp  The startinp
      */
-    public InputValidator(String startinp) {
+    InputValidator(String startinp) {
         inp = startinp;
     }
     public int length() {
@@ -25,26 +25,33 @@ class InputValidator {
      * @return     { Boolean }
      */
     public boolean validateData() {
-        if (inp.length() >= 5) {
+    	final int six = 6;
+        if (inp.length() >= six) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
 /**.
  * Class for solution.
  */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
     /**.
      * Main function
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String input = scan.next();
         InputValidator inp = new InputValidator(input);
         System.out.println(inp.validateData());
+        InputValidator test = new InputValidator("jksaj");
     }
 }
