@@ -129,8 +129,8 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index <= size) {
-        for (; index < size; index++) {
-            arrayList[index-1] = arrayList[index];
+        for (; index < size-1; index++) {
+            arrayList[index] = arrayList[index+1];
         }
         size -= 1;
         } else {
