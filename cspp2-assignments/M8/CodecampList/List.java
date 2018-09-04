@@ -87,7 +87,7 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arrayList[size] = item;
         size += 1;
@@ -125,12 +125,12 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index <= size) {
-        for (; index < size-1; index++) {
-            arrayList[index] = arrayList[index+1];
+        for (int i = index; i < size - 1; i++) {
+            arrayList[i] = arrayList[i + 1];
         }
         size -= 1;
         }
@@ -150,7 +150,7 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index > size) {
             return -1;
@@ -189,19 +189,19 @@ public class List {
         // Replace the code below
         String displayStr = "[";
         int i = 0;
-        for (i = 0; i < size-1; i++) {
+        for (i = 0; i < size - 1; i++) {
             displayStr += arrayList[i] + ",";
         } displayStr += arrayList[i] + "]";
         return displayStr;
     } 
-    
+
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (arrayList[i] == item) {
@@ -212,11 +212,11 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (arrayList[i] == item) {
@@ -226,7 +226,7 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
