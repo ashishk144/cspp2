@@ -29,7 +29,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] a;
+    private int[] arrayList;
 
     /*
      * What are the other class variables needed for creating a list?
@@ -73,7 +73,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        a = new int[10];
+        arrayList = new int[10];
     }
     
     /*
@@ -89,7 +89,7 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        a[size] = item;
+        arrayList[size] = item;
         size += 1;
     }
 
@@ -130,7 +130,7 @@ public class List {
         // Think about what to do to the size variable.
         if (index <= size) {
         for (; index < size; index++) {
-            a[index-1] = a[index];
+            arrayList[index-1] = arrayList[index];
         }
         size -= 1;
         } else {
@@ -154,7 +154,7 @@ public class List {
         if (index > size) {
             System.out.println("Index Out of Bounds Exception");
         }
-    return a[index];
+    return arrayList[index];
         // try {
         //     return a[index];
         // }
@@ -189,8 +189,8 @@ public class List {
         String displayStr = "[";
         int i = 0;
         for (i = 0; i < size-1; i++) {
-            displayStr += a[i] + ", ";
-        } displayStr += a[i] + "]";
+            displayStr += arrayList[i] + ", ";
+        } displayStr += arrayList[i] + "]";
         return displayStr;
     } 
     
@@ -203,7 +203,7 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if (a[i] == item) {
+            if (arrayList[i] == item) {
                 return true;
             }
         }
@@ -218,7 +218,7 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if (a[i] == item) {
+            if (arrayList[i] == item) {
                 return i;
             }
         }
