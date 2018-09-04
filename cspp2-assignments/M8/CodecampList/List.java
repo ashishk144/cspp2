@@ -58,8 +58,8 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    private int[] arrayList;
-    private int size;
+    private int[] arrayList; //arraylist
+    private int size; //size variable
     /**.
      * Constructs the object.
      */
