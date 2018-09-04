@@ -31,8 +31,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] arrayList;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -55,12 +53,13 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    private int[] arrayList;
+    private int size;
     /**.
      * Constructs the object.
      */
