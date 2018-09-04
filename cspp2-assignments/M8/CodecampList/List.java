@@ -203,7 +203,7 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         int i = 0;
-        for (i = 0; i < size; i++) {
+        for (i = 0; i <= size; i++) {
             if (a[i] == item) {
                 return true;
             }
