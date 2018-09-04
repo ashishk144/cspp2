@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.lang.ArrayIndexOutOfBoundsException;
 /**.
  * class of List.
  */
@@ -51,7 +50,6 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
@@ -81,7 +79,7 @@ public class List {
         size = 0;
         arrayList = new int[10];
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
