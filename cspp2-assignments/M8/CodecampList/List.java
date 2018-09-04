@@ -153,8 +153,9 @@ public class List {
         // Replace the code below to write the code for get
         if (index > size) {
             System.out.println("Index Out of Bounds Exception");
+            return -1;
         }
-    return arrayList[index];
+        return arrayList[index];
         // try {
         //     return a[index];
         // }
