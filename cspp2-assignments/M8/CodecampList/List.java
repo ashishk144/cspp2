@@ -76,7 +76,8 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        arrayList = new int[10];
+        final int ten = 10;
+        arrayList = new int[ten];
     }
 
     /*
