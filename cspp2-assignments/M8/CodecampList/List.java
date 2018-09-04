@@ -59,6 +59,7 @@ public class List {
      * class variables with some default values.
      */
     private int[] arrayList;
+    /** size variable */
     private int size;
     /**.
      * Constructs the object.
