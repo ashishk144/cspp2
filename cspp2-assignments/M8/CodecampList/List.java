@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.lang.ArrayIndexOutOfBoundsException;
+/**
+ * class of List.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -25,7 +28,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -60,6 +63,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -87,6 +93,11 @@ public class List {
      * 
      * The method returns void (nothing)
      */
+    /**.
+     * { Add function }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arrayList[size] = item;
@@ -99,6 +110,11 @@ public class List {
      * to the objects outside the list
      * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * Size function
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -125,6 +141,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * Remove function
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -149,6 +170,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * Get function
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -185,6 +213,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * to string function
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String displayStr = "[";
@@ -201,6 +234,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * Contains function
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -216,6 +256,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -225,7 +272,11 @@ public class List {
         }
         return -1;
     }
-
+    /**
+     * Main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
