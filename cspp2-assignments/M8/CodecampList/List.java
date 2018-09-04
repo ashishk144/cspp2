@@ -133,9 +133,10 @@ public class List {
             arrayList[index] = arrayList[index+1];
         }
         size -= 1;
-        } else {
-            System.out.println("Invalid Position Exception");
         }
+        //  else {
+        //     System.out.println("Invalid Position Exception");
+        // }
     }
 
     /*
@@ -152,7 +153,6 @@ public class List {
     public int get(int index) {
         // Replace the code below to write the code for get
         if (index > size) {
-            System.out.println("Index Out of Bounds Exception");
             return -1;
         }
         return arrayList[index];
