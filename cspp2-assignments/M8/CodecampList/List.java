@@ -59,7 +59,7 @@ public class List {
      * class variables with some default values.
      */
     /**.
-    size variable 
+    size variable
      **/
     private int[] arrayList;
     /**.
