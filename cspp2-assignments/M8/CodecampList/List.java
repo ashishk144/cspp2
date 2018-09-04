@@ -156,10 +156,9 @@ public class List {
             arrayList[i] = arrayList[i + 1];
         }
         size -= 1;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
-        //  else {
-        //     System.out.println("Invalid Position Exception");
-        // }
     }
 
     /*
