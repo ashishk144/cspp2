@@ -189,7 +189,7 @@ public class List {
         String displayStr = "[";
         int i = 0;
         for (i = 0; i < size-1; i++) {
-            displayStr += arrayList[i] + ", ";
+            displayStr += arrayList[i] + ",";
         } displayStr += arrayList[i] + "]";
         return displayStr;
     } 
