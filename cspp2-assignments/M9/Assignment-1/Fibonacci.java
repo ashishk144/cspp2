@@ -43,12 +43,12 @@ final class Fibonacci {
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
-        int a = 0, b = 1, fib = 1;
+        int parameter1 = 0, parameter2 = 1, fib = 1;
         for (int i = 0; i < n; i++) {
-            list.add(a);
-            a = b;
-            b = fib;
-            fib = a + b;
+            list.add(parameter1);
+            parameter1 = parameter2;
+            parameter2 = fib;
+            fib = parameter1 + parameter2;
         }
         return list;
     }
