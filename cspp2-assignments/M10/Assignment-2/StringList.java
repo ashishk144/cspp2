@@ -181,9 +181,9 @@ public class StringList implements StringListInterface{
      */
 
     public void remove(int index) {
-        if ((index > size && size >= 0) || index < 0) {
+        if (index > size || index < 0) {
             System.out.println("Invalid Position Exception");
-        } else {
+        } else if (list[0] != "") {
         for (int i = index; i < size - 1; i++) {
             list[i] = list[i + 1];
         }
