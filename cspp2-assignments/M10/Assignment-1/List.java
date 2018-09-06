@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-/**
+/**.
  * Class of List
  */
 public class List {
@@ -32,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    list variable
+    **/
     private int[] list;
 
     /*
@@ -56,6 +59,9 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    list variable
+    **/
     private int size;
 
     /*
@@ -101,7 +107,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List (final int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -115,7 +121,7 @@ public class List {
      * to the list.
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
@@ -271,7 +277,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      index  The index
