@@ -181,13 +181,13 @@ public class StringList implements StringListInterface{
      */
 
     public void remove(int index) {
-        if (index > size || index < 0) {
-            System.out.println("Invalid Position Exception");
-        } else if (list[0] != "") {
+        if (index >= 0 && index < size) {
         for (int i = index; i < size - 1; i++) {
             list[i] = list[i + 1];
         }
         size -= 1;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
     }
 
