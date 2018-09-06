@@ -73,7 +73,7 @@ final class Solution {
     private Solution() {
 
     }
-    /**
+    /**.
      * { var_description }
      */
     private static Scanner stdin = new Scanner(new
