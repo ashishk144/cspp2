@@ -130,6 +130,7 @@ public class StringList implements StringListInterface{
             System.out.println("Resize");
             list = resize();
         }
+        System.out.println("This is add"+item);
         list[size] = item;
         size++;
     }
@@ -138,6 +139,7 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
         for (String eachElem: items) {
+            System.out.println("This is addAll: "+eachElem);
             add(eachElem);
         }
     }
