@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class of List
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -29,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    list
+    **/
     private int[] list;
 
     /*
@@ -48,12 +54,14 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    size
+    **/
     private int size;
 
     /*
@@ -70,7 +78,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -110,15 +119,15 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
-    public void add(final int item) {
+    public void add (final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
             resize();
         }
-        list[size++] = item;    }
+        list[size++] = item;
+    }
 
     /*
      * Resize the list
@@ -137,14 +146,14 @@ public class List {
      * with the contents of the original array.
 
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
-     * double the size of the old array.
+     * Create a method called resize(). Resize should create an new array that
+     * is double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming to answer these questions
      */
     /**.
      * Resizing function
@@ -157,10 +166,9 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
-    /**
+    /**.
      * Size function
      *
      * @return     { description_of_the_return_value }
@@ -179,7 +187,7 @@ public class List {
             size++;
         }
     }
-    /**
+    /**.
      * Adds with index
      *
      * @param      index  The index
