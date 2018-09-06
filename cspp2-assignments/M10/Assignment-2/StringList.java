@@ -126,8 +126,8 @@ public class StringList implements StringListInterface{
      * The method returns void (nothing)
      */
     public void add(String item) {
-        if (size == list.length) {
-            resize();
+        if (size >= list.length) {
+            list = resize();
         }
         list[size] = item;
         size++;
@@ -151,8 +151,8 @@ public class StringList implements StringListInterface{
         return size;
     }
 
-    private void resize() {
-        list = Arrays.copyOf(list, 2 * list.length);
+    private String[] resize() {
+        return Arrays.copyOf(list, 2 * list.length);
     }
 
     /*
