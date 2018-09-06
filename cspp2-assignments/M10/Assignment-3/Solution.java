@@ -1,7 +1,19 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+Clas sStudent
+**/
 class Student {
+    /**
+     * Constructs the object.
+     */
+    private Student() {
+
+    }
+    /**
+     * Var string
+     */
     private String name;
     /**
      * Constructs the object.
@@ -56,14 +68,14 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
         switch (objectType) {
             case "S"://This case will be executed for String type list
-                List <String> listString = new List();
+                List<String> listString = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
@@ -128,7 +140,7 @@ public class Solution {
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for (int i = 0;i < temp.length; i++ ) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         listInteger.addAll(temp);
