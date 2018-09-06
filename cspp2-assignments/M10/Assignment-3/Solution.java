@@ -73,12 +73,13 @@ final class Solution {
     private Solution() {
 
     }
+    private static Scanner stdin = new Scanner(new
+        BufferedInputStream(System.in));
     /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
-    private static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
 
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -209,7 +210,7 @@ final class Solution {
             break;
         }
     }
-/**
+/**.
  * { function_description }
  */
 public static void fMethod() {
