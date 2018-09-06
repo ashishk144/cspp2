@@ -165,7 +165,7 @@ public class StringList implements StringListInterface{
      */
 
     public void remove(int index) {
-        if (index < 0 && index > size) {
+        if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
         for (int i = index; i < size - 1; i++) {
