@@ -152,7 +152,7 @@ public class StringList implements StringListInterface{
     }
 
     private String[] resize() {
-        return Arrays.copyOf(list, 2 * list.length);
+        return Arrays.copyOf(list, 2*list.length);
     }
 
     /*
