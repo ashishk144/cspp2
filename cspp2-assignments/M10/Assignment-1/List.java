@@ -326,6 +326,9 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
+        if (get(0) == 0) {
+            System.out.println("Invalid Position Exception");
+        }
         return str;
     }
 
