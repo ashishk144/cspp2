@@ -64,6 +64,12 @@ class Student {
  */
 class Solution {
     /**.
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
