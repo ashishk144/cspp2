@@ -104,8 +104,14 @@ public class StringList implements StringListInterface{
      * constructor.
      * 
      */
-
-    // todo - add an overloaded constructor here
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
+    public StringList(final int capacity) {
+        list = new String[capacity];
+    }
 
     
     /*
