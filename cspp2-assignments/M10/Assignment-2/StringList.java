@@ -126,6 +126,7 @@ public class StringList implements StringListInterface{
      * The method returns void (nothing)
      */
     public void add(String item) {
+        System.out.println(size +" "+ list.length);
         if (size == list.length) {
             System.out.println("Resize");
             list = resize();
