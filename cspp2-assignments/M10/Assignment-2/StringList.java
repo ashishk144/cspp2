@@ -199,10 +199,10 @@ public class StringList implements StringListInterface{
      * number of items in the list? Would size variable be useful?
      */
     public String get(int index) {
-        if (index > size) {
-            return "";
+        if (index >= 0 && index < size) {
+            return list[index];
         }
-        return list[index];
+        return null;
     }
 
     /*
@@ -233,8 +233,8 @@ public class StringList implements StringListInterface{
         int i = 0;
         for (i = 0; i < size - 1; i++) {
             displayStr += list[i] + ",";
-        } displayStr += list[i] + "]";
-        return displayStr;
+        }
+        return displayStr += list[i] + "]";
         }
     }
     
