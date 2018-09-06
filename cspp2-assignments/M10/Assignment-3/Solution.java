@@ -62,7 +62,7 @@ class Student {
 /**
  * Class for solution.
  */
-final class Solution {
+class Solution {
     /**
      * { function_description }
      *
@@ -113,7 +113,8 @@ final class Solution {
                         System.out.println(listString.indexOf(tokens[1]));
                         break;
                         case "get":
-                        System.out.println(listString.get(Integer.parseInt(tokens[1])));
+                        System.out.println(listString.get(
+                            Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
                         System.out.println(listString.contains(tokens[1]));
@@ -131,7 +132,8 @@ final class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the corresponding
+                    //method
                     switch (tokens[0]) {
                         case "add":
                             listInteger.add(Integer.parseInt(tokens[1]));
