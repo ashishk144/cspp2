@@ -127,9 +127,12 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
+        if (items.length < 1) {
+        } else {
         for (String eachElem: items) {
             list[size] = eachElem;
             size++;
+        }
         }
     }
     /*
