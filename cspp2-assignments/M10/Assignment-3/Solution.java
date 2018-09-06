@@ -63,7 +63,7 @@ class Student {
  * Class for solution.
  */
 class Solution {
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -165,13 +165,16 @@ class Solution {
                         listInteger.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listInteger.indexOf(Integer.parseInt((tokens[1]))));
+                        System.out.println(listInteger.indexOf(
+                            Integer.parseInt((tokens[1]))));
                         break;
                         case "get":
-                        System.out.println(listInteger.get(Integer.parseInt(tokens[1])));
+                        System.out.println(listInteger.get(
+                            Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
+                        System.out.println(listInteger.contains(
+                            Integer.parseInt((tokens[1]))));
                         break;
                         default:
                         break;
@@ -186,7 +189,6 @@ class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listFloat.add(Float.parseFloat(tokens[1]));
@@ -218,13 +220,16 @@ class Solution {
                         listFloat.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
+                        System.out.println(listFloat.indexOf(
+                            Float.parseFloat(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
+                        System.out.println(listFloat.get(
+                            Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
+                        System.out.println(listFloat.contains(
+                            Float.parseFloat(tokens[1])));
                         break;
                         default:
                         break;
@@ -239,7 +244,8 @@ class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the corresponding
+                    // method
                     switch (tokens[0]) {
                         case "add":
                             listCharacter.add(tokens[1].charAt(0));
@@ -295,7 +301,8 @@ class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the corresponding
+                    // method
                     switch (tokens[0]) {
                         case "add":
                             listDouble.add(Double.parseDouble(tokens[1]));
@@ -317,7 +324,8 @@ class Solution {
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString in StringList class
+                        // print the list (implement toString in StringList
+                        // class
                         //for this to work)
                         // expected format is [item-1,item-2,...,item-n]
                         // review the output testcase file
@@ -327,13 +335,16 @@ class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(listDouble.indexOf(
+                            Double.parseDouble(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+                        System.out.println(listDouble.get(
+                            Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                        System.out.println(listDouble.contains(
+                            Double.parseDouble(tokens[1])));
                         break;
                         default:
                         break;
@@ -341,14 +352,16 @@ class Solution {
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O"://This case will be executed for Student type list i.e
+            //to store List of Student Objects
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the corresponding
+                    // method
                     switch (tokens[0]) {
                         case "add":
                             listStudent.add(new Student(tokens[1]));
