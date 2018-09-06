@@ -112,8 +112,8 @@ public class List<E> {
         if (index >= 0 && index < size) {
             return list[index];
         }
-        E value = ((E) "one");;
-        return value;
+        // E value = ((E) "one");;
+        return null;
     }
     /*
      * What happens when you print an object using println?
