@@ -126,6 +126,9 @@ public class StringList implements StringListInterface{
      * The method returns void (nothing)
      */
     public void add(String item) {
+        if (size == list.length) {
+            resize();
+        }
         list[size] = item;
         size++;
     }
@@ -134,6 +137,9 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
         for (String eachElem: items) {
+            if (size == list.length) {
+                resize();
+            }
             list[size] = eachElem;
             size++;
         }
@@ -147,6 +153,10 @@ public class StringList implements StringListInterface{
      */
     public int size() {
         return size;
+    }
+
+    private void resize() {
+        list = Arrays.copyOf(list, 2 * list.length);
     }
 
     /*
