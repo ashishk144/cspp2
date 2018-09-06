@@ -78,7 +78,7 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+    private static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
 
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -193,24 +193,26 @@ final class Solution {
                 }
             break;
             case "F"://This case will be executed for Float type list
-                Fmethod();
+                fMethod();
             break;
             case "C"://This case will be executed for Character type list
-                Cmethod();
+                cMethod();
             break;
             case "D"://This case will be executed for Double type list
-                Dmethod();
+                dMethod();
             break;
             case "O"://This case will be executed for Student type list i.e
             //to store List of Student Objects
-                Omethod();
+                oMethod();
                 break;
             default:
             break;
         }
     }
-
-public static void Fmethod() {
+/**
+ * { function_description }
+ */
+public static void fMethod() {
     List<Float> listFloat = new List();
     while (stdin.hasNext()) {
         // read the line
@@ -264,7 +266,10 @@ public static void Fmethod() {
         }
     }
 }
- public static void Cmethod() {
+/**.
+ * { function_description }
+ */
+ public static void cMethod() {
     List<Character> listCharacter = new List();
     while (stdin.hasNext()) {
         // read the line
@@ -320,8 +325,10 @@ public static void Fmethod() {
         }
     }
  }
-
- public static void Dmethod() {
+/**.
+ * { function_description }
+ */
+ public static void dMethod() {
     List<Double> listDouble = new List();
     while (stdin.hasNext()) {
         // read the line
@@ -378,8 +385,10 @@ public static void Fmethod() {
         }
     }
  }
-
- public static void Omethod() {
+/**.
+ * { function_description }
+ */
+ public static void oMethod() {
     List<Student> listStudent = new List();
     while (stdin.hasNext()) {
         // read the line
