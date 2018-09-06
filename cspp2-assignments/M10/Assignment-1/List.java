@@ -181,7 +181,7 @@ public class List {
      *
      * @param      items  The items
      */
-    public void addAll(final int[] items) {
+    public void addAll (final int[] items) {
         for (int eachElem: items) {
             list[size] = eachElem;
             size++;
@@ -193,7 +193,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(final int index,final int item) {
+    public void add (final int index,final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
@@ -251,8 +251,8 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index > 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index > 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -272,8 +272,8 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(final int index) {
-        if(index < 0 || index >= size) {
+    public int get (final int index) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -301,11 +301,12 @@ public class List {
 
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -328,9 +329,10 @@ public class List {
      * or -1 if this list does not contain the element.
      */
     public int indexOf (final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -350,14 +352,15 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 }
-                else{
-                    if(t.length>1)
+                else {
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
@@ -365,11 +368,12 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int temp[] = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
+                    temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
