@@ -32,9 +32,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /**
-    list
-    **/
     private int[] list;
 
     /*
@@ -59,9 +56,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    /**
-    size
-    **/
     private int size;
 
     /*
@@ -102,7 +96,7 @@ public class List {
      * constructor.
 
      */
-    /**
+    /**.
      * Constructs the object.
      *
      * @param      capacity  The capacity
@@ -121,7 +115,12 @@ public class List {
      * to the list.
      * The method returns void (nothing)
      */
-    public void add (final int item) {
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
             resize();
@@ -181,7 +180,7 @@ public class List {
      *
      * @param      items  The items
      */
-    public void addAll (final int[] items) {
+    public void addAll(final int[] items) {
         for (int eachElem: items) {
             list[size] = eachElem;
             size++;
@@ -193,7 +192,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add (final int index,final int item) {
+    public void add(final int index, final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
@@ -214,11 +213,11 @@ public class List {
      *
      * @return     { count }
      */
-    public int count (final int item) {
+    public int count(final int item) {
         int count = 0;
         for (int eachElement: list) {
             if (eachElement == item) {
-                count ++;
+                count++;
             }
         }
         return count;
@@ -227,7 +226,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -269,10 +268,17 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get (final int index) {
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -300,6 +306,11 @@ public class List {
      * not all the elements of the array.
 
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0) {
             return "[]";
@@ -319,16 +330,30 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains (final int item) {
+    /**.
+     * Checks whether the item is in the list
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf (final int item) {
+    /**.
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
                 return i;
@@ -336,7 +361,11 @@ public class List {
         }
         return -1;
     }
-
+    /**.
+     * Main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -356,10 +385,9 @@ public class List {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else {
+                } else {
                     if (t.length > 1) {
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
@@ -400,6 +428,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
