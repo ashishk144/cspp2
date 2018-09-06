@@ -327,7 +327,7 @@ public class List {
         }
         str = str + list[i] + "]";
         if (get(0) == 0) {
-            str += "Invalid Position Exception";
+            str += "\nInvalid Position Exception";
         }
         return str;
     }
