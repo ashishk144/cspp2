@@ -32,7 +32,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /**
+    /**.
     list variable
     **/
     private int[] list;
@@ -59,7 +59,7 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    /**
+    /**.
     list variable
     **/
     private int size;
@@ -405,9 +405,8 @@ public class List {
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++) {
+                for (int i = 0; i < temp.length; i++)
                     temp[i] = Integer.parseInt(t1[i]);
-                }
                 l.addAll(temp);
                 }
                 break;
