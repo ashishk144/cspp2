@@ -188,8 +188,7 @@ public class List {
      */
     public void addAll(final int[] items) {
         for (int eachElem: items) {
-            list[size] = eachElem;
-            size++;
+            add(eachElem);
         }
     }
     /**.
