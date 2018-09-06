@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
-/**
+/**.
 Clas sStudent
 **/
 class Student {
@@ -11,7 +11,7 @@ class Student {
     private Student() {
 
     }
-    /**
+    /**.
      * Var string
      */
     private String name;
@@ -20,7 +20,7 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(String name) {
+    Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -33,7 +33,7 @@ class Student {
     //Getter method which returns the value of instance variable
         return this.name;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      other  The other
@@ -41,7 +41,7 @@ class Student {
      * @return     { description_of_the_return_value }
      */
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -62,7 +62,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * { function_description }
      *
