@@ -128,10 +128,8 @@ public class StringList implements StringListInterface{
     public void add(String item) {
         System.out.println(size +" "+ list.length);
         if (size == list.length) {
-            System.out.println("Resize");
-            list = resize();
+            resize();
         }
-        System.out.println("This is add"+item);
         list[size] = item;
         size++;
     }
@@ -140,7 +138,6 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
         for (String eachElem: items) {
-            System.out.println("This is addAll: "+eachElem);
             add(eachElem);
         }
     }
@@ -155,8 +152,8 @@ public class StringList implements StringListInterface{
         return size;
     }
 
-    private String[] resize() {
-        return Arrays.copyOf(list, 2*list.length);
+    private void resize() {
+        list = Arrays.copyOf(list, 2*list.length);
     }
 
     /*
