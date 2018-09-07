@@ -274,13 +274,14 @@ public class List {
       */
      public void removeAll(final int[] newArray) {
         for (int eachV: newArray) {
-            for (int j = 0; j < size; j++) {
             int i = indexOf(eachV);
-            if (i >= 0) {
-                System.out.println(list[i]);
-                remove(i);
+            while(i != -1) {
+                if (i >= 0) {
+                    // System.out.println(list[i]);
+                    remove(i);
+                    i = indexOf(eachV);
+                }
             }
-        }
         }
     }
     /*
