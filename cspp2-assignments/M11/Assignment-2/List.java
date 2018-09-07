@@ -188,7 +188,7 @@ public class List<E> {
      indicates the endIndex.
      */
     public List subList(int start, int end) {
-        if (size >= 0 && start >= 0 && end < size && start < end) {
+        if (size >= 0 && start >= 0 && end <= size && start < end) {
             List l = new List();
             for (int i = start; i < end; i++) {
                 l.add(list[i]);
