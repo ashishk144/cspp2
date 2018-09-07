@@ -9,16 +9,27 @@ import java.util.Arrays;
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
+    /**
+     * Class of List.
+     *
+     * @param      <E>   { parameter_description }
+     */
 public class List<E> {
     private E[] list;
     private int size;
-    //Constructor
+    /**
+     * Constructs the object.
+     */
     public List() {
         // Create a variable of the type Object[]
         list = ((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
-    //Overloaded Constructor
+    /**
+     * Constructs the object.
+     *
+     * @param      param  The parameter
+     */
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -30,6 +41,11 @@ public class List<E> {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
+     */
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
      */
     public void add(E item) {
         if (size == list.length) {
@@ -59,7 +75,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -229,9 +245,9 @@ public class List<E> {
         // }
         // return false;
         // return this.toString().equals(list.toString())
-	    return true;
-	    }
-	}
+        return true;
+        }
+    }
     /*Removes all the elements from list*/
     public void clear() {
         size = 0;
