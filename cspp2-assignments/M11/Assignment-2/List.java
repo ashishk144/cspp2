@@ -213,9 +213,11 @@ public class List<E> {
             // }
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
-                E eachElement = list[i];
-                if (!(check.equals(eachElement))) {
-                    return false;
+                for (int j = 0; j < size; j++) {
+                    E eachElement = list[i];
+                    if (!(check.equals(eachElement))) {
+                        return false;
+                    }
                 }
             }
         }
