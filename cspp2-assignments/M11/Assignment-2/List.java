@@ -214,7 +214,7 @@ public class List<E> {
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
                 for (int j = 0; j < size; j++) {
-                    E eachElement = list[i];
+                    E eachElement = list[j];
                     if (!(check.equals(eachElement))) {
                         return false;
                     }
