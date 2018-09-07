@@ -11,17 +11,19 @@ class Student {
     /**.
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      nam  The name
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
-        this.name = name;
+    public Student(final String nam) {
+    //A constructor used to initialize the instance variables
+        this.name = nam;
     }
     /**.
      * Gets the name.
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
 
@@ -33,7 +35,8 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(final Object other) {
+    //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -63,7 +66,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListInteger(Scanner stdin) {
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -156,7 +159,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListDouble(Scanner stdin) {
+    public static void executeListDouble(final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -249,7 +252,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListFloat(Scanner stdin) {
+    public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -342,7 +345,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListString(Scanner stdin) {
+    public static void executeListString(final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -428,7 +431,7 @@ public class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListStudent(Scanner stdin) {
+    public static void executeListStudent(final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -524,7 +527,7 @@ public class Solution {
      */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
-        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        final Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
         switch(objectType) {
