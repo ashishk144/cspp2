@@ -206,8 +206,8 @@ public class List {
         int i;
         for (i = 0; i < size - 1; i++) {
             display += list[i] + ",";
-        }
-        return display += list[i] + "]";
+        } display += list[i] + "]";
+        return display;
         }
         return "[]";
     }
