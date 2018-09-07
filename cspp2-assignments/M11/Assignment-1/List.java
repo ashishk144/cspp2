@@ -208,8 +208,9 @@ public class List {
             display += list[i] + ",";
         }
         return display += list[i] + "]";
-        }
+        } else {
         return "[]";
+    }
     }
     /*
      * Contains return true if the list has the item passed as an argument to
