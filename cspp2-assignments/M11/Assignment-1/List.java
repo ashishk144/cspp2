@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-/**
+/**.
  * Class of List
  */
 public class List {
@@ -28,7 +28,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -50,13 +50,13 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
-    /**
+    /**.
      * { var_description }
      */
     private int[] list;
-    /**
+    /**.
      * { var_description }
      */
     private int size;
@@ -68,7 +68,7 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
-    /**
+    /**.
      * Constructs the object.
      */
     public List() {
@@ -82,10 +82,11 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
     }
-    
+
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -94,19 +95,19 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (size == list.length) {
             resize();
         }
         list[size++] = item;
         // size++;
     }
-    /**
+    /**.
      * { function_description }
      */
     private void resize() {
@@ -119,7 +120,7 @@ public class List {
      * The method returns an int. Empty list should return 0.
      *
      */
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -147,12 +148,12 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            size --;
+            size--;
         } else {
             System.out.println("Invalid Position Exception");
         }
@@ -174,7 +175,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index >= 0 && index < size) {
             return list[index];
         }
@@ -203,13 +204,12 @@ public class List {
         if (size > 0) {
         String display = "[";
         int i;
-        for (i = 0; i < size-1; i++) {
+        for (i = 0; i < size - 1; i++) {
             display += list[i] + ",";
-        }
-        return display += list[i] + "]";
+        } return display += list[i] + "]";
         }
         return "[]";
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -222,7 +222,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int eachElem: list) {
             if (eachElem == item) {
                 return true;
@@ -241,7 +241,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return i;
@@ -257,8 +257,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         for (int eachVal: newArray) {
             add(eachVal);
         }
@@ -272,7 +271,7 @@ public class List {
       *
       * @param      newArray  The new array
       */
-     public void removeAll(int[] newArray) {
+     public void removeAll(final int[] newArray) {
         for (int eachV: newArray) {
             int i = indexOf(eachV);
             System.out.println(i);
@@ -296,7 +295,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         if (size > 0 && start >= 0 && end < size && start < end) {
             List l = new List();
             for (int i = start; i < end; i++) {
@@ -319,7 +318,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List inpList) {
+    public boolean equals(final List inpList) {
         if (inpList.size() != size) {
             return false;
         } else {
@@ -419,7 +418,9 @@ public class List {
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
