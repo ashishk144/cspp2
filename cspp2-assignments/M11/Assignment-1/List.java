@@ -298,7 +298,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public List subList(final int start, final int end) {
-        if (size > 0 && start >= 0 && end <= size && start < end) {
+        if (size >= 0 && start >= 0 && end <= size && start < end) {
             List l = new List();
             for (int i = start; i < end; i++) {
                 l.add(list[i]);
