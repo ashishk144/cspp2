@@ -207,7 +207,7 @@ public class List<E> {
         } else {
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
-                if (check.equals(list[i])) {
+                if (!(check.equals(list[i]))) {
                     return false;
                 }
             }
