@@ -223,12 +223,13 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        for (int eachElem: list) {
-            if (eachElem == item) {
-                return true;
-            }
-        }
-        return false;
+        // for (int eachElem: list) {
+        //     if (eachElem == item) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
