@@ -207,17 +207,14 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] newArray)
-     {
+     public void removeAll(int[] newArray) {
         for (int eachV: newArray) {
-            for (int eachE: list) {
-                if (eachV == eachE) {
-                    int i = indexOf(eachE);
-                    remove(i);
-                }
+            int i = indexOf(eachV);
+            if (i >= 0) {
+                remove(i);
             }
         }
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
