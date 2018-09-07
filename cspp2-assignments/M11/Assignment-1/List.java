@@ -240,7 +240,7 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(List inpList) {
-        if (inpList.size() != list.length) {
+        if (inpList.size() != size) {
             return false;
         } else {
             for (int i = 0; i < list.length; i++) {
