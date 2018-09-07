@@ -137,7 +137,7 @@ final class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -148,7 +148,7 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
+
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -238,7 +238,7 @@ final class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -249,7 +249,7 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
+
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -339,7 +339,7 @@ final class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -350,7 +350,7 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
+
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -430,7 +430,7 @@ final class Solution {
                         l.removeAll(t2);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -441,7 +441,7 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
+
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -531,7 +531,7 @@ final class Solution {
                         l.removeAll(students);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -542,7 +542,6 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
