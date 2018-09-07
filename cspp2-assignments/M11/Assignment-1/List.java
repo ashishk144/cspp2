@@ -324,15 +324,19 @@ public class List {
         if (inpList.size() != size) {
             return false;
         } else {
+            int count = 0;
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
                 if (inpList.get(i) == list[j]) {
-                    return false;
+                    count += 1;
                 }
                 }
             }
+            if (count >= size) {
+                return true;
+            }
         }
-        return true;
+        return false;
     }
     /*
     * Removes all the elements from list
