@@ -244,7 +244,7 @@ public class List {
         if (inpList.size() != size) {
             return false;
         } else {
-            for (int i = 0; i < list.length; i++) {
+            for (int i = 0; i < size; i++) {
                 System.out.println(inpList.get(i));
                 if (inpList.get(i) != list[i]) {
                     return false;
