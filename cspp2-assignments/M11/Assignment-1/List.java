@@ -325,8 +325,10 @@ public class List {
             return false;
         } else {
             for (int i = 0; i < size; i++) {
-                if (inpList.get(i) != list[i]) {
+                for (int j = 0; j < size; j++) {
+                if (inpList.get(i) == list[j]) {
                     return false;
+                }
                 }
             }
         }
