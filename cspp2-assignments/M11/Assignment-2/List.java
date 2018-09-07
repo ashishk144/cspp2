@@ -188,13 +188,14 @@ public class List<E> {
      indicates the endIndex.
      */
     public List subList(int start, int end) {
-        if (size > 0 && start >= 0 && end <= size && start < end) {
+        if (size >= 0 && start >= 0 && end < size && start < end) {
             List l = new List();
             for (int i = start; i < end; i++) {
                 l.add(list[i]);
             }
         return l;
-        } else {
+        }
+        else {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
@@ -206,28 +207,31 @@ public class List<E> {
         if (listdata.size() != size) {
             return false;
         } else {
-            // for (int i = 0; i < size; i++) {
-            //     E check = listdata.get(i);
-            //     if (!(check.equals(list[i]))) {
-            //         return false;
-            //     }
-            // }
-            int count = 0;
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
-                for (int j = 0; j < size; j++) {
-                    E eachElement = list[j];
-                    if (check.equals(eachElement)) {
-                        count += 1;
-                    }
+                if (!(check.equals(list[i]))) {
+                    return false;
                 }
             }
-            if (count >= size) {
-                return true;
-            }
-        }
-        return false;
-    }
+        //     int count = 0;
+        //     for (int i = 0; i < size; i++) {
+        //         E check = listdata.get(i);
+        //         for (int j = 0; j < size; j++) {
+        //             E eachElement = list[j];
+        //             if (check.equals(eachElement)) {
+        //                 count += 1;
+        //             }
+        //         }
+        //     }
+        //     if (count >= size) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        // return this.toString().equals(list.toString())
+	    return true;
+	    }
+	}
     /*Removes all the elements from list*/
     public void clear() {
         size = 0;
