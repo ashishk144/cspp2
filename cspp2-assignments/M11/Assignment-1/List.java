@@ -203,10 +203,9 @@ public class List {
     public String toString() {
         if (size > 0) {
         String display = "[";
-        int i;
-        for (i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             display += list[i] + ",";
-        } display += list[i] + "]";
+        } display += list[size - 1] + "]";
         return display;
         }
         return "[]";
