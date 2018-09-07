@@ -240,12 +240,10 @@ public class List {
     exactly matching with the given list or not.
     */
     public boolean equals(List inpList) {
-        System.out.println(inpList.size() + " " + size);
         if (inpList.size() != size) {
             return false;
         } else {
             for (int i = 0; i < size; i++) {
-                System.out.println(inpList.get(i));
                 if (inpList.get(i) != list[i]) {
                     return false;
                 }
