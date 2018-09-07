@@ -205,9 +205,16 @@ public class List<E> {
         if (listdata.size() != size) {
             return false;
         } else {
+            // for (int i = 0; i < size; i++) {
+            //     E check = listdata.get(i);
+            //     if (!(check.equals(list[i]))) {
+            //         return false;
+            //     }
+            // }
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
-                if (!(check.equals(list[i]))) {
+                E eachElement = list[i];
+                if (!(check.equals(eachElement))) {
                     return false;
                 }
             }
