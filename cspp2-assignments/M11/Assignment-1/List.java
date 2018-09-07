@@ -208,9 +208,8 @@ public class List {
             display += list[i] + ",";
         }
         return display += list[i] + "]";
-        } else {
+        }
         return "[]";
-    }
     }
     /*
      * Contains return true if the list has the item passed as an argument to
@@ -275,9 +274,11 @@ public class List {
       */
      public void removeAll(final int[] newArray) {
         for (int eachV: newArray) {
+            for (int j = 0; j < size; j++) {
             int i = indexOf(eachV);
             if (i >= 0) {
                 remove(i);
+            }
             }
         }
     }
