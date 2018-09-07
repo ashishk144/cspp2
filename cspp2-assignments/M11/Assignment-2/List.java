@@ -211,17 +211,21 @@ public class List<E> {
             //         return false;
             //     }
             // }
+            int count = 0;
             for (int i = 0; i < size; i++) {
                 E check = listdata.get(i);
                 for (int j = 0; j < size; j++) {
                     E eachElement = list[j];
-                    if (!(check.equals(eachElement))) {
-                        return false;
+                    if (check.equals(eachElement)) {
+                        count += 1;
                     }
                 }
             }
+            if (count == size) {
+                return true;
+            }
         }
-        return true;
+        return false;
     }
     /*Removes all the elements from list*/
     public void clear() {
