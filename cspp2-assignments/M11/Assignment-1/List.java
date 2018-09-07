@@ -277,9 +277,10 @@ public class List {
             for (int j = 0; j < size; j++) {
             int i = indexOf(eachV);
             if (i >= 0) {
+                System.out.println(i);
                 remove(i);
             }
-            }
+        }
         }
     }
     /*
