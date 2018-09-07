@@ -221,7 +221,7 @@ public class List<E> {
                     }
                 }
             }
-            if (count == size) {
+            if (count >= size) {
                 return true;
             }
         }
