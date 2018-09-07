@@ -210,6 +210,7 @@ public class List {
      public void removeAll(int[] newArray) {
         for (int eachV: newArray) {
             int i = indexOf(eachV);
+            System.out.println(i);
             if (i >= 0) {
                 remove(i);
             }
