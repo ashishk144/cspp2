@@ -229,7 +229,7 @@ public class List {
         //     }
         // }
         // return false;
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
