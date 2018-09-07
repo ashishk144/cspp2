@@ -275,7 +275,7 @@ public class List {
      public void removeAll(final int[] newArray) {
         for (int eachV: newArray) {
             int i = indexOf(eachV);
-            while(i != -1) {
+            while (i != -1) {
                 if (i >= 0) {
                     // System.out.println(list[i]);
                     remove(i);
