@@ -146,6 +146,14 @@ class Set {
     }
     public Set retainAll(int[] array) {
         Set set = new Set();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (arr[i] == array[j]) {
+                    set.add(arr[i]);
+                    break;
+                }
+            }
+        }
         return set;
     }
     public int[][] cartesianProduct(Set inpset) {
