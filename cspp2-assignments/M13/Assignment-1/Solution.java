@@ -96,7 +96,7 @@ class Set {
             return "{}";
         }
     }
-    /**
+    /**.
      * gets the value at index
      *
      * @param      index  The index
@@ -110,6 +110,21 @@ class Set {
         return -1;
     }
     /**.
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int indexOf(int item) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == item) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**.
      * Finds the intersection among the set
      *
      * @param      that  The that
@@ -118,11 +133,11 @@ class Set {
      */
     public Set intersection(Set that) {
         Set newset = new Set();
-        for (int j = 0; j < that.size(); j++) {
-            int eachElement = that.get(j);
-            for (int i = 0; i < size; i++) {
-                if (this.arr[i] == eachElement) {
-                    newset.add(eachElement);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < that.size(); j++) {
+                int element = that.get(i);
+                if (arr[i] == element) {
+                    newset.add(arr[i]);
                 }
             }
         }
@@ -134,7 +149,7 @@ class Set {
     }
     public int[][] cartesianProduct(Set inpset) {
         if (size > 0) {
-            int[][] newarray = new int[(size-1)*(inpset.size() - 1)][2];
+            int[][] newarray = new int[2][2];
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < (inpset.size() - 1); j++) {
                     newarray[j][0] = arr[i];
