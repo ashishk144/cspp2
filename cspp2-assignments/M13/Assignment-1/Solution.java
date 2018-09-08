@@ -162,8 +162,8 @@ class Set {
             for (int i = 0; i < (size * inpset.size()); i++) {
                 for (int j = 0; j < size; j++) {
                     for (int k = 0; k < inpset.size(); k++) {
-                        newarray[k][0] = this.arr[i];
-                        newarray[k][1] = inpset.get(j);
+                        newarray[i][0] = this.arr[j];
+                        newarray[i][1] = inpset.get(k);
                     }
                 }
             }
