@@ -159,11 +159,13 @@ class Set {
     public int[][] cartesianProduct(Set inpset) {
         if (size > 0 && inpset.size() > 0) {
             int[][] newarray = new int[size * inpset.size()][2];
+            int i = 0;
             for (int k = 0; k < (size * inpset.size()); k++) {
-                for (int i = 0; i < size; i++) {
+                while(i < size) {
                     for (int j = 0; j < inpset.size(); j++) {
                         newarray[k][0] = arr[i];
                     }
+                i++;
                 break;
                 }
             }
