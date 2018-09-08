@@ -152,7 +152,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(int[] array) {
+    public Set retainAll(final int[] array) {
         Set set = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < array.length; j++) {
