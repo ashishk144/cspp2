@@ -18,8 +18,9 @@ class Set {
     /**.
      * Constructs the object.
      */
-    public Set() {
-        arr = new int[10];
+    Set() {
+        final int ten = 10;
+        arr = new int[ten];
         size = 0;
     }
     /**.
@@ -35,7 +36,7 @@ class Set {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (size == arr.length) {
             resize();
         }
@@ -52,7 +53,7 @@ class Set {
      *
      * @param      newarr  The newarr
      */
-    public void add(int[] newarr) {
+    public void add(final int[] newarr) {
         for (int eachVal: newarr) {
             int count = 0;
             for (int i = 0; i < size; i++) {
@@ -72,7 +73,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int val) {
+    public boolean contains(final int val) {
         for (int eachVal: arr) {
             if (eachVal == val) {
                 return true;
@@ -103,8 +104,8 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
-        if (index >=0 && index < size) {
+    public int get(final int index) {
+        if (index >= 0 && index < size) {
             return arr[index];
         }
         return -1;
@@ -116,7 +117,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == item) {
                 return i;
@@ -131,7 +132,7 @@ class Set {
      *
      * @return     Intersected set.
      */
-    public Set intersection(Set that) {
+    public Set intersection(final Set that) {
         Set newset = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < that.size(); j++) {
@@ -144,25 +145,39 @@ class Set {
         }
         return newset;
     }
+    /**.
+     * Retains all the values of the array.
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set retainAll(int[] array) {
         Set set = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < array.length; j++) {
-                if (arr[i] == array[j]) {
-                    set.add(arr[i]);
+                if (this.arr[i] == array[j]) {
+                    set.add(this.arr[i]);
                     break;
                 }
             }
         }
         return set;
     }
-    public int[][] cartesianProduct(Set inpset) {
+    /**
+     * Cartesian Product.
+     *
+     * @param      inpset  The inpset
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set inpset) {
         if (size > 0 && inpset.size() > 0) {
-            int[][] newarray = new int[size * inpset.size()][2];
+            int[][] newarray = new int[this.size * inpset.size()][2];
             int k = 0;
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < this.size; i++) {
                 for (int j = 0; j < inpset.size(); j++) {
-                    newarray[k][0] = arr[i];
+                    newarray[k][0] = this.arr[i];
                     newarray[k][1] = inpset.get(j);
                     k++;
                 }
