@@ -138,6 +138,7 @@ class Set {
                 int element = that.get(i);
                 if (arr[i] == element) {
                     newset.add(arr[i]);
+                    break;
                 }
             }
         }
