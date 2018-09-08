@@ -163,6 +163,7 @@ class Set {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < inpset.size(); j++) {
                     newarray[k][0] = arr[i];
+                    newarray[k][1] = inpset.get(j);
                     k++;
                 }
             }
