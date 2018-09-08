@@ -135,7 +135,7 @@ class Set {
         Set newset = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < that.size(); j++) {
-                int element = that.get(i);
+                int element = that.get(j);
                 if (arr[i] == element) {
                     newset.add(arr[i]);
                     break;
