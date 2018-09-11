@@ -41,13 +41,12 @@ class Set {
      * @return     true or false.
      */
     public boolean contains(final int item) {
-        boolean checkFlag = false;
         for (int i = 0; i < size; i++) {
             if (set[i] == item) {
-                checkFlag = true;
+                return true;
             }
         }
-        return checkFlag;
+        return false;
     }
     /**
      * Returns a string representation of the object.
