@@ -16,7 +16,7 @@ class List {
     /**.
      * Constructs the object.
      */
-    public List() {
+    List() {
         final int ten = 10;
         list = new int[ten];
         size = 0;
@@ -50,7 +50,9 @@ class List {
     /**.
      * { function_description }
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
@@ -133,7 +135,8 @@ class List {
       *
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray) throws Exception{
+
+     public void removeAll(final int[] newArray) throws Exception {
         for (int eachV: newArray) {
             int i = indexOf(eachV);
             while (i != -1) {
@@ -145,13 +148,15 @@ class List {
             }
         }
     }
-    /**.
-     * sublist function
+    /**
+     * { function_description }
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public List subList(final int start, final int end) throws Exception {
         if (size > 0 && start >= 0 && end <= size && start < end) {
@@ -189,8 +194,14 @@ class List {
     public void clear() {
         size = 0;
     }
-
-    public int count(int item) {
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -200,13 +211,21 @@ class List {
     return count;
     }
 }
+/**
+ * Class for solution.
+ */
 class Solution {
-    /**.
-     * Main function
+    private Solution() {
+
+    }
+    /**
+     * { function_description }
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
-    public static void main(final String[] args) throws Exception{
+    public static void main(final String[] args) throws Exception {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -238,7 +257,7 @@ class Solution {
                     if (tokens.length == 2) {
                         try {
                         l.remove(Integer.parseInt(tokens[1]));
-                        } catch(Exception e) {
+                        } catch (Exception e) {
                             System.out.println(e.getMessage());
                         }
                     }
