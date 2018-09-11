@@ -108,7 +108,11 @@ class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])).toString());
                 break;
             case "last":
+            try {
                 System.out.println(s.last());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
             default:
                 break;
             }
