@@ -16,7 +16,7 @@ class SortedSet extends Set {
         sort();
         if (size() >= 0) {
             for (int i = size() - 1; i >= 0; i--) {
-                if (element >= set[i]) {
+                if (Math.abs(element) >= Math.abs(set[i])) {
                     return i;
                 }
             }
