@@ -293,7 +293,7 @@ class Solution {
                             System.out.println(object);
                         }
                     } catch (Exception e) {
-                        System.out.println(e);
+                        System.out.println(e.getMessage());
                     }
                     break;
                 case "equals":
