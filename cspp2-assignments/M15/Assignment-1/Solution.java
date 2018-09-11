@@ -190,6 +190,8 @@ class List {
     public void clear() {
         size = 0;
     }
+}
+class Solution {
     /**.
      * Main function
      *
