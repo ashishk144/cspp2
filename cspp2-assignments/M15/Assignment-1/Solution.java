@@ -286,10 +286,14 @@ class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]),
-                            Integer.parseInt(arrstring3[1]));
-                    if (object != null) {
-                        System.out.println(object);
+                    try {
+                        List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                Integer.parseInt(arrstring3[1]));
+                        if (object != null) {
+                            System.out.println(object);
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
                     }
                     break;
                 case "equals":
