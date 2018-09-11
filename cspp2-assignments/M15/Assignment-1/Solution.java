@@ -130,12 +130,13 @@ class List {
             add(eachVal);
         }
     }
-     /**.
-      * Removes all.
-      *
-      * @param      newArray  The new array
-      */
-
+    /**.
+     * Removes all.
+     *
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
+     */
      public void removeAll(final int[] newArray) throws Exception {
         for (int eachV: newArray) {
             int i = indexOf(eachV);
@@ -148,7 +149,7 @@ class List {
             }
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      start      The start
@@ -194,7 +195,7 @@ class List {
     public void clear() {
         size = 0;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
@@ -214,11 +215,14 @@ class List {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args       The arguments
