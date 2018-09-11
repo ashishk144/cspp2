@@ -37,15 +37,17 @@ class SortedSet extends Set {
         }
     }
     public Set headSet(final int toele) throws Exception {
+        sort();
         return subSet(getIndex(0), toele);
     }
     public void addAll(int[] newarray) {
         add(newarray);
         sort();
     }
-    public int last() throws Exception{
+    public int last(){
     if (size() == 0) {
-        throw new Exception("Set Empty Exception");
+        System.out.println("Set Empty Exception");
+        return -1;
     }
     return set[size() - 1];
     }
