@@ -190,6 +190,16 @@ class List {
     public void clear() {
         size = 0;
     }
+
+    public int count(int item) {
+        int count = 0;
+        for (int eachElement: list) {
+            if (eachElement == item) {
+                count++;
+            }
+        }
+    return count;
+    }
 }
 class Solution {
     /**.
