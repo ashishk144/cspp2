@@ -153,7 +153,7 @@ class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception {
         if (size > 0 && start >= 0 && end <= size && start < end) {
             List l = new List();
             for (int i = start; i < end; i++) {
@@ -161,8 +161,7 @@ class List {
             }
         return l;
         } else {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            throw new Exception("Index Out of Bounds Exception");
         }
     }
     /**.
@@ -193,8 +192,8 @@ class List {
 
     public int count(int item) {
         int count = 0;
-        for (int eachElement: list) {
-            if (eachElement == item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 count++;
             }
         }
