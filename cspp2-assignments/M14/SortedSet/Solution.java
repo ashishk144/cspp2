@@ -1,4 +1,5 @@
 import java.util.*;
+
 class SortedSet extends Set {
     public void sort() {
         for (int i = 0; i < size; i++) {
@@ -13,33 +14,42 @@ class SortedSet extends Set {
     }
     public int getIndex(int element) {
         sort();
-        if (size > 0) {
-            for (int i = 0; i < size() - 1; i++) {
-                if (set[i] > element) {
+        if (size() >= 0) {
+            for (int i = size() - 1; i >= 0; i--) {
+                if (element >= set[i]) {
                     return i;
                 }
             }
         }
         return -1;
     }
-    public Set subSet(int fromElement, int toElement) throws Exception {
+    public Set subSet(int fromElement, int toElement) {
         if (fromElement > toElement) {
-            throw new Exception("Invalid Arguments to Subset Exception");
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
         } else {
             sort();
             int fromindex = getIndex(fromElement);
             int toindex = getIndex(toElement);
-            Set subset = new Set();
-            int k = 0;
+            // System.out.println(fromindex + " " + toindex);
+            Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
-                    subset.add(this.get(i));
+                // System.out.println(get(i));
+                    res.add(get(i));
             }
-            return subset;
+            // System.out.println(res.toString());
+            return res;
         }
     }
-    public Set headSet(final int toele) throws Exception {
+    public Set headSet(final int toele) {
         sort();
-        return subSet(getIndex(0), toele);
+        Set result = new Set();
+        for (int i = 0; i < size; i++) {
+            if (set[i] < toele) {
+                result.add(set[i]);
+            }
+        }
+        return result;
     }
     public void addAll(int[] newarray) {
         add(newarray);
@@ -90,7 +100,7 @@ public class Solution {
                 try {
                 Set set = s.subSet(a[0], a[1]);
                 if (set != null) {
-                    System.out.println(s.toString());
+                    System.out.println(set.toString());
                 }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
@@ -105,6 +115,7 @@ public class Solution {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+            break;
             default:
                 break;
             }
