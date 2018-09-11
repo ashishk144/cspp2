@@ -83,7 +83,7 @@ class Solution {
                 break;
             case "addAll":
                 String[] arg = tokens[1].split(",");
-                int[] arr = new int[arg.length - 1];
+                int[] arr = new int[arg.length];
                 for (int i = 0; i < arg.length; i++) {
                     arr[i] = Integer.parseInt(arg[i]);
                 }
