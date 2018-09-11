@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.*;
 
 public class Set {
 
@@ -13,12 +12,12 @@ public class Set {
     /**
      * holds the elemtns in this Set array.
      */
-    private int[] set;
+    int[] set;
 
     /**
      * indicates the number of elememnts of this set.
      */
-    private int size;
+    int size;
 
     /**
      * Default constructor to create an array with the szie 10.
@@ -27,9 +26,7 @@ public class Set {
         set = new int[TEN];
         size = 0;
     }
-    public int[] get() {
-        return Arrays.copyOf(set, size);
-    }
+
     /**
      * add the item to this set at the last.
      * If the set is full, resize the set to double
@@ -174,8 +171,5 @@ public class Set {
             }
         }
         return -1;
-    }
-    public void clear() {
-        size = 0;
     }
 }

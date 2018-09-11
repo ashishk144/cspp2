@@ -1,54 +1,67 @@
 import java.util.*;
-class SortedSet extends Set {
+class SortedSet extends Set{
+    SortedSet() {
+        super();
+    }
     public void sort() {
-        for (int i = 0; i < size - 1; i++) {
-            for (int j = i + 1; j < size; j++ )
-                if(set[i] > set[j]) {
+        for (int i = 0; i < size(); i++) {
+            for (int j = i + 1; j < size(); j++) {
+                if (set[i] > set[j]) {
                     int temp = set[j];
                     set[j] = set[i];
-                    set[j] = temp;
-                }
-        }
-    }
-    public int getIndex(int element) {
-        sort();
-        if (size > 0) {
-            for (int i = 0; i < size() - 1; i++) {
-                if (set[i] > element) {
-                    return i;
+                    set[i] = temp;
                 }
             }
         }
-        return -1;
     }
     public Set subSet(int fromElement, int toElement) throws Exception {
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
         } else {
-        int fromindex = getIndex(fromElement);
-        int toindex = getIndex(toElement);
-        Set subset = new Set();
-        int k = 0;
-        for (int i = fromindex; i < toindex; i++) {
-                subset.add(this.get(i));
+            sort();
+            int i; int j;
+            for (i = 0; i < size(); i++) {
+                if(set[i] > fromElement) {
+                    break;
+                } 
+            }
+            for (j = size() - 1; j > i; j++) {
+                if(set[j] < toElement) {
+                    break;
+                }
+            }
+            for (int k = i; k < j; k++) {
+                sortedset.add(set[k]);
+            }
+            return sortedset;
         }
-        return subset;
-        }
-    }
-    public Set headSet(final int toele) throws Exception {
-        return subSet(getIndex(0), toele);
-    }
-    public void addAll(int[] newarray) {
-        add(newarray);
-        sort();
     }
     public int last() throws Exception{
-    if (size() == 0) {
-        throw new Exception("Set Empty Exception");
+        if (size() == 0) {
+            throw new Exception("Set Empty Exception");
+        }
+        return set[size() - 1];
     }
-    return set[size() - 1];
+    public Set headSet(int toElement) {
+        int j;
+        for (j = size() - 1; j >= 0; j++) {
+                if(set[j] < toElement) {
+                    break;
+                }
+            }
+        for (int k = 0; k < j; k++) {
+            sortedset.add(set[k]);
+        }
+        return sortedset;
+    }
+    public void addAll(int[] newarray) {
+        for (int i: newarray) { 
+            add(i);
+        }
     }
 }
+
+
 class Solution {
     Solution() {
 
