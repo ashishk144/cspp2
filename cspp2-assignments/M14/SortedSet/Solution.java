@@ -90,7 +90,12 @@ class Solution {
                 s.addAll(arr);
                 break;
             case "subSet":
-                Set set = s.subSet(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                String[] ar = tokens[1].split(",");
+                int[] a = new int[ar.length];
+                for (int i = 0; i < ar.length; i++) {
+                    a[i] = Integer.parseInt(ar[i]);
+                }
+                Set set = s.subSet(a[0], a[1]);
                 if (set != null) {
                     System.out.println(s.toString());
                 }
