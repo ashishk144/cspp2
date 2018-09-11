@@ -14,7 +14,7 @@ class SortedSet extends Set {
     }
     public int getIndex(int element) {
         sort();
-        if (size() >= 0 && element >= 0) {
+        if (size() >= 0) {
             for (int i = size() - 1; i >= 0; i--) {
                 if (element >= set[i]) {
                     return i;
@@ -31,10 +31,10 @@ class SortedSet extends Set {
             sort();
             int fromindex = getIndex(fromElement);
             int toindex = getIndex(toElement);
-            System.out.println(fromindex + " " + toindex);
+            // System.out.println(fromindex + " " + toindex);
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
-                System.out.println(get(i));
+                // System.out.println(get(i));
                     res.add(get(i));
             }
             // System.out.println(res.toString());
