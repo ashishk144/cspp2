@@ -38,8 +38,8 @@ class SortedSet extends Set {
             for (int i = fromindex; i < toindex; i++) {
                 // System.out.println(get(i));
                 if (get(i) != -9999) {
+                	res.add(get(i));
                 } else {
-                    res.add(get(i));
                 }
             }
             // System.out.println(res.toString());
