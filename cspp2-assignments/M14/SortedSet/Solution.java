@@ -95,9 +95,13 @@ class Solution {
                 for (int i = 0; i < ar.length; i++) {
                     a[i] = Integer.parseInt(ar[i]);
                 }
+                try {
                 Set set = s.subSet(a[0], a[1]);
                 if (set != null) {
                     System.out.println(s.toString());
+                }
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
                 break;
             case "headSet":
