@@ -25,14 +25,15 @@ class SortedSet extends Set {
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
         } else {
-        int fromindex = getIndex(fromElement);
-        int toindex = getIndex(toElement);
-        Set subset = new Set();
-        int k = 0;
-        for (int i = fromindex; i < toindex; i++) {
-                subset.add(this.get(i));
-        }
-        return subset;
+            sort();
+            int fromindex = getIndex(fromElement);
+            int toindex = getIndex(toElement);
+            Set subset = new Set();
+            int k = 0;
+            for (int i = fromindex; i < toindex; i++) {
+                    subset.add(this.get(i));
+            }
+            return subset;
         }
     }
     public Set headSet(final int toele) throws Exception {
