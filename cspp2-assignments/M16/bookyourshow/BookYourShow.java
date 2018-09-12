@@ -48,9 +48,9 @@ public class BookYourShow {
                 Arrays.toString(shows[i].seats()).replace(" ", ""));
         }
         // System.out.println("Bookings");
-        for (int i = 0; i < bookSize; i++) {
-            System.out.println(bookings[i][0] + " " + bookings[i][1] + " " + bookings[i][2]);
-        }
+        // for (int i = 0; i < bookSize; i++) {
+        //     System.out.println(bookings[i][0] + " " + bookings[i][1] + " " + bookings[i][2]);
+        // }
     }
     private boolean bookavailableSeat(String mov, String time, String[] seats) {
         int c = 0;
