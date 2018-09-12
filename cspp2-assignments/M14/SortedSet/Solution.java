@@ -1,7 +1,11 @@
-import java.util.Arrays;
 import java.util.Scanner;
-
+/**.
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
+	/**.
+	 * Sort function
+	 */
     public void sort() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++ ) {
@@ -13,8 +17,15 @@ class SortedSet extends Set {
             }
         }
     }
-    public int getIndex(int element) {
-        sort();
+    /**.
+     * Gets the index.
+     *
+     * @param      element  The element
+     *
+     * @return     The index.
+     */
+    public int getIndex(final int element) {
+        // sort();
         if (size() >= 0) {
             for(int i = 0; i<size;i++){
             	if(set[i] == element){
@@ -24,9 +35,17 @@ class SortedSet extends Set {
             	}
             }
         }
-        return size;
+        return size();
     }
-    public Set subSet(int fromElement, int toElement) {
+    /**.
+     * Subset
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set subSet(final int fromElement, final int toElement) {
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
@@ -44,21 +63,38 @@ class SortedSet extends Set {
             return res;
         }
     }
+    /**.
+     * Headset
+     *
+     * @param      toele  The toele
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set headSet(final int toele) {
         // sort();
         Set result = new Set();
         int toIndex = getIndex(toele);
         for (int i = 0; i < toIndex; i++) {
             // if (set[i] < toele) {
-                result.add(set[i]);
+            result.add(set[i]);
             // }
         }
         return result;
     }
-    public void addAll(int[] newarray) {
+    /**.
+     * Adds all.
+     *
+     * @param      newarray  The newarray
+     */
+    public void addAll(final int[] newarray) {
         add(newarray);
         sort();
     }
+    /**.
+     * Returns last value
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int last(){
     if (size() == 0) {
         System.out.println("Set Empty Exception");
@@ -67,10 +103,23 @@ class SortedSet extends Set {
     return set[size() - 1];
     }
 }
+/**.
+ * Class for solution.
+ */
 public class Solution {
-    Solution() {
+	/**.
+	 * Constructs the object.
+	 */
+    private Solution() {
 
     }
+    /**.
+     * Main function
+     *
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
+     */
     public static void main(String[] args) throws Exception{
         SortedSet s = new SortedSet();
         Scanner stdin = new Scanner(System.in);
@@ -121,7 +170,7 @@ public class Solution {
             }
             break;
             default:
-                break;
+            break;
             }
         }
     }
