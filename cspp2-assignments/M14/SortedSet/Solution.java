@@ -3,13 +3,13 @@ import java.util.Scanner;
  * Class for sorted set.
  */
 class SortedSet extends Set {
-	/**.
-	 * Sort function
-	 */
+    /**.
+     * Sort function
+     */
     public void sort() {
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++ ) {
-                if(set[i] < set[j]) {
+            for (int j = 0; j < size; j++) {
+                if (set[i] < set[j]) {
                     int temp = set[j];
                     set[j] = set[i];
                     set[i] = temp;
@@ -27,12 +27,12 @@ class SortedSet extends Set {
     public int getIndex(final int element) {
         // sort();
         if (size() >= 0) {
-            for(int i = 0; i<size;i++){
-            	if(set[i] == element){
-            		return i;
-            	}else if(set[i] > element){
-            		return i;
-            	}
+            for (int i = 0; i < size(); i++) {
+                if (set[i] == element) {
+                    return i;
+                } else if (set[i] > element){
+                    return i;
+                }
             }
         }
         return size();
@@ -57,7 +57,7 @@ class SortedSet extends Set {
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
                 // System.out.println(get(i));
-                	res.add(get(i));
+                    res.add(get(i));
             }
             // System.out.println(res.toString());
             return res;
@@ -95,7 +95,7 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int last(){
+    public int last() {
     if (size() == 0) {
         System.out.println("Set Empty Exception");
         return -1;
@@ -106,10 +106,10 @@ class SortedSet extends Set {
 /**.
  * Class for solution.
  */
-public class Solution {
-	/**.
-	 * Constructs the object.
-	 */
+final class Solution {
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
 
     }
@@ -120,7 +120,7 @@ public class Solution {
      *
      * @throws     Exception  { exception_description }
      */
-    public static void main(String[] args) throws Exception{
+    public static void main(final String[] args) {
         SortedSet s = new SortedSet();
         Scanner stdin = new Scanner(System.in);
         while (stdin.hasNext()) {
@@ -160,7 +160,8 @@ public class Solution {
                 }
                 break;
             case "headSet":
-                System.out.println(s.headSet(Integer.parseInt(tokens[1])).toString());
+                System.out.println(s.headSet(Integer.parseInt(
+                    tokens[1])).toString());
                 break;
             case "last":
             try {
