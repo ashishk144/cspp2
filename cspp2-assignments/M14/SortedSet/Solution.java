@@ -45,12 +45,13 @@ class SortedSet extends Set {
         }
     }
     public Set headSet(final int toele) {
-        sort();
+        // sort();
         Set result = new Set();
-        for (int i = 0; i < size; i++) {
-            if (set[i] < toele) {
+        int toIndex = getIndex(toele);
+        for (int i = 0; i < toIndex; i++) {
+            // if (set[i] < toele) {
                 result.add(set[i]);
-            }
+            // }
         }
         return result;
     }
