@@ -37,7 +37,7 @@ class SortedSet extends Set {
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
                 // System.out.println(get(i));
-                if (get(i) != -1) {
+                if (get(i) != -9999) {
                 	res.add(get(i));
                 } else {
                 }

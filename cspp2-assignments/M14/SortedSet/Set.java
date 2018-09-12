@@ -126,7 +126,7 @@ public class Set {
      */
     public int get(final int index) {
         if (index < 0 || index >= this.size()) {
-            return -1;
+            return -9999;
         } else {
             return set[index];
         }
