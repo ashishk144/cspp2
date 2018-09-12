@@ -34,10 +34,10 @@ class SortedSet extends Set {
             // sort();
             int fromindex = getIndex(fromElement);
             int toindex = getIndex(toElement);
-            System.out.println(fromindex + " " + toindex);
+            // System.out.println(fromindex + " " + toindex);
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
-                System.out.println(get(i));
+                // System.out.println(get(i));
                 	res.add(get(i));
             }
             // System.out.println(res.toString());
