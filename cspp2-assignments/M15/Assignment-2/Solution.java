@@ -142,7 +142,7 @@ final class Solution {
                             .toArray();
     }
     /**
-     * { function_description }
+     * Main function.
      *
      * @param      args       The arguments
      *
@@ -205,7 +205,7 @@ final class Solution {
             case "intersection":
                 SortedSet st = new SortedSet();
                 SortedSet t = new SortedSet();
-                int [] intArray = intArray(tokens[1]);
+                int[] intArray = intArray(tokens[1]);
                 st.add(intArray);
                 st.sort();
                 intArray = intArray(tokens[2]);
