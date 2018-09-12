@@ -30,7 +30,7 @@ class SortedSet extends Set {
             for (int i = 0; i < size(); i++) {
                 if (set[i] == element) {
                     return i;
-                } else if (set[i] > element){
+                } else if (set[i] > element) {
                     return i;
                 }
             }
