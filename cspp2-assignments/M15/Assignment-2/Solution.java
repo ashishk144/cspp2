@@ -38,15 +38,18 @@ class SortedSet extends Set {
         }
         return size();
     }
-    /**.
-     * Subset
+    /**
+     * Subset function.
      *
      * @param      fromElement  The from element
      * @param      toElement    To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception    { exception_description }
      */
-    public Set subSet(final int fromElement, final int toElement) throws Exception{
+    public Set subSet(final int fromElement, final int toElement)
+    throws Exception {
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
         } else {
@@ -63,12 +66,14 @@ class SortedSet extends Set {
             return res;
         }
     }
-    /**.
-     * Headset
+    /**
+     * Headset function.
      *
-     * @param      toele  The toele
+     * @param      toele      The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public Set headSet(final int toele) throws Exception {
         // sort();
@@ -93,10 +98,12 @@ class SortedSet extends Set {
         add(newarray);
         sort();
     }
-    /**.
-     * Returns last value
+    /**
+     * Last function.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public int last() throws Exception {
     if (size() == 0) {
@@ -134,9 +141,10 @@ final class Solution {
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
-    /**.
-     * Main function
-     st     * @param      args       The arguments
+    /**
+     * { function_description }
+     *
+     * @param      args       The arguments
      *
      * @throws     Exception  { exception_description }
      */
