@@ -5,6 +5,7 @@ public class BookYourShow {
     Show[] shows = new Show[10];
     String[][] bookings = new String[10][3];
     int bookSize = 0;
+    boolean flag = false;
     public void addAShow(Show newshow) {
         shows[size++] = newshow;
     }
@@ -24,8 +25,10 @@ public class BookYourShow {
             bookings[bookSize][1] = mov;
             bookings[bookSize][2] = time;
             bookSize++;
-        } else {
+        } if (flag == false) {
             System.out.println("No show");
+        } else {
+            flag = false;
         }
     }
     public void printTicket(String mov, String time, String mob) {
@@ -41,7 +44,8 @@ public class BookYourShow {
     public void showAll() {
         // System.out.println("Show array");
         for (int i = 0; i < size; i++) {
-            System.out.println(shows[i].name() + " " + shows[i].time() + " " + Arrays.toString(shows[i].seats()).replace(" ", ""));
+            System.out.println(shows[i].name() + " " + shows[i].time() + " " +
+                Arrays.toString(shows[i].seats()).replace(" ", ""));
         }
         // System.out.println("Bookings");
         for (int i = 0; i < bookSize; i++) {
@@ -49,18 +53,23 @@ public class BookYourShow {
         }
     }
     private boolean bookavailableSeat(String mov, String time, String[] seats) {
+        int c = 0;
         for(int i = 0; i < size; i++) {
             if(shows[i].name().equals(mov) && shows[i].time().equals(time)) {
+                flag = true;
                 String[] reqSeats = shows[i].seats();
                 for (int j = 0; j < reqSeats.length; j++) {
                     for (int k = 0; k < seats.length; k++) {
                         if(reqSeats[j].equals(seats[k])) {
                             reqSeats[j] = "N/A";
-                            return true;
+                            c++;
                         }
                     }
                 }
             }
+        }
+        if(c > 0) {
+            return true;
         }
     return false;
     }
