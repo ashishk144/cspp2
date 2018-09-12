@@ -37,7 +37,7 @@ class SortedSet extends Set {
             // System.out.println(fromindex + " " + toindex);
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
-                // System.out.println(get(i));
+                System.out.println(get(i));
                 	res.add(get(i));
             }
             // System.out.println(res.toString());
