@@ -24,9 +24,10 @@ public class BookYourShow {
             bookings[bookSize][1] = mov;
             bookings[bookSize][2] = time;
             bookSize++;
-        } else {
-            System.out.println("No show");
         }
+        // } else {
+        //     System.out.println("No show");
+        // }
     }
     public void printTicket(String mov, String time, String mob) {
         for (int i = 0; i < bookSize; i++) {
