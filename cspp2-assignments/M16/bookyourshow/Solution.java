@@ -54,8 +54,7 @@ public final class Solution {
 
                 case "print":
                     bys.printTicket(check[1], tokens[1], tokens[2]);
-                break; 
-
+                break;
                 case "showAll":
                     bys.showAll();
                 break;
