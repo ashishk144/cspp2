@@ -66,7 +66,8 @@ public class BookYourShow {
         }
         if (c > 0) {
             return true;
+        } else {
+            return false;
         }
-    return false;
     }
 }
