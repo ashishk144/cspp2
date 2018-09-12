@@ -78,7 +78,7 @@ class SortedSet extends Set {
             result.add(set[i]);
             // }
         }
-        if (result.equals("{}")) {
+        if (result.size() == 0) {
             throw new Exception("Set Empty Exception");
         }
         return result;
