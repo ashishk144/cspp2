@@ -69,7 +69,7 @@ class SortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set headSet(final int toele) {
+    public Set headSet(final int toele) throws Exception {
         // sort();
         Set result = new Set();
         int toIndex = getIndex(toele);
@@ -77,6 +77,9 @@ class SortedSet extends Set {
             // if (set[i] < toele) {
             result.add(set[i]);
             // }
+        }
+        if (result.equals("{}")) {
+            throw new Exception("Set Empty Exception");
         }
         return result;
     }
@@ -158,8 +161,12 @@ final class Solution {
                 }
                 break;
             case "headSet":
+            try {
                 System.out.println(s.headSet(Integer.parseInt(
                     tokens[1])).toString());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
                 break;
             case "last":
             try {
