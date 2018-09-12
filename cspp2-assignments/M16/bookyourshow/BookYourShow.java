@@ -56,8 +56,8 @@ public class BookYourShow {
                 for (int j = 0; j < reqSeats.length; j++) {
                     for (int k = 0; k < seats.length; k++) {
                         if(reqSeats[j].equals(seats[k])) {
-                            System.out.println(reqSeats[k]);
-                            reqSeats[k] = "N/A";
+                            // System.out.println(reqSeats[j]+seats[k]);
+                            reqSeats[j] = "N/A";
                             c++;
                         }
                     }
