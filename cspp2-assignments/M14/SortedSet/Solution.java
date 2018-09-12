@@ -16,12 +16,12 @@ class SortedSet extends Set {
     public int getIndex(int element) {
         sort();
         if (size() >= 0) {
-            for (int i = size() - 1; i >= 0; i--) {
-                if (element > set[i]) {
-                    return i + 1;
-                } else if (element == set[i]) {
-                	return i;
-                } 
+            for(int i = 0; i<size;i++){
+            	if(set[i] == element){
+            		return i;
+            	}else if(set[i] > element){
+            		return i;
+            	}
             }
         }
         return -1;
@@ -31,10 +31,10 @@ class SortedSet extends Set {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         } else {
-            sort();
+            // sort();
             int fromindex = getIndex(fromElement);
             int toindex = getIndex(toElement);
-            // System.out.println(fromindex + " " + toindex);
+            System.out.println(fromindex + " " + toindex);
             Set res = new Set();
             for (int i = fromindex; i < toindex; i++) {
                 System.out.println(get(i));
