@@ -49,6 +49,7 @@ public class BookYourShow {
         // }
     }
     private boolean bookavailableSeat(String mov, String time, String[] seats) {
+        int c = 0;
         for(int i = 0; i < size; i++) {
             if(shows[i].name().equals(mov) && shows[i].time().equals(time)) {
                 String[] reqSeats = shows[i].seats();
@@ -56,11 +57,14 @@ public class BookYourShow {
                     for (int k = 0; k < seats.length; k++) {
                         if(reqSeats[j].equals(seats[k])) {
                             reqSeats[k] = "N/A";
-                            return true;
+                            c++;
                         }
                     }
                 }
             }
+        }
+        if (c > 0) {
+            return true;
         }
     return false;
     }
