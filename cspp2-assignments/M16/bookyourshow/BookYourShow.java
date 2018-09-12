@@ -44,7 +44,7 @@ public class BookYourShow {
     public void showAll() {
         // System.out.println("Show array");
         for (int i = 0; i < size; i++) {
-            System.out.println(shows[i].name() + " " + shows[i].time() + " " +
+            System.out.println(shows[i].name() + "," + shows[i].time() + "," +
                 Arrays.toString(shows[i].seats()).replace(" ", ""));
         }
         // System.out.println("Bookings");
