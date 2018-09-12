@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 class SortedSet extends Set {
     public void sort() {
@@ -35,13 +36,12 @@ class SortedSet extends Set {
             int toindex = getIndex(toElement);
             // System.out.println(fromindex + " " + toindex);
             Set res = new Set();
-            for (int i = fromindex; i < toindex; i++) {
-                // System.out.println(get(i));
-                if (get(i) != -9999) {
-                	res.add(get(i));
-                } else {
-                }
-            }
+            if(fromindex != -1 && toindex != -1) {
+	            for (int i = fromindex; i < toindex; i++) {
+	                // System.out.println(get(i));
+	                	res.add(get(i));
+	            }
+	        }
             // System.out.println(res.toString());
             return res;
         }
