@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**.
  * Class for sorted set.
  */
@@ -114,10 +115,28 @@ final class Solution {
     private Solution() {
 
     }
+    /**
+     * helper function to convert string input to int array.
+     *
+     * @param      s     { string input from test case file }
+     *
+     * @return     { int array from the given string }
+     */
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
+    }
     /**.
      * Main function
-     *
-     * @param      args       The arguments
+     st     * @param      args       The arguments
      *
      * @throws     Exception  { exception_description }
      */
@@ -175,6 +194,22 @@ final class Solution {
                 System.out.println(e.getMessage());
             }
             break;
+            case "intersection":
+                Set st = new Set();
+                Set t = new Set();
+                int [] intArray = intArray(tokens[1]);
+                st.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(st.intersection(t));
+                break;
+            case "retainAll":
+                st = new Set();
+                intArray = intArray(tokens[1]);
+                st.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(st.retainAll(intArray));
+                break;
             default:
             break;
             }
