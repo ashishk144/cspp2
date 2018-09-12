@@ -199,14 +199,17 @@ final class Solution {
                 SortedSet t = new SortedSet();
                 int [] intArray = intArray(tokens[1]);
                 st.add(intArray);
+                st.sort();
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
+                t.sort();
                 System.out.println(st.intersection(t));
                 break;
             case "retainAll":
                 st = new SortedSet();
                 intArray = intArray(tokens[1]);
                 st.add(intArray);
+                st.sort();
                 intArray = intArray(tokens[2]);
                 System.out.println(st.retainAll(intArray));
                 break;
