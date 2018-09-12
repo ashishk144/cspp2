@@ -24,7 +24,7 @@ class SortedSet extends Set {
             	}
             }
         }
-        return -1;
+        return size-1;
     }
     public Set subSet(int fromElement, int toElement) {
         if (fromElement > toElement) {
