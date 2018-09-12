@@ -22,4 +22,7 @@ class Show {
         }
         return false;
     }
+    public String toString() {
+        return this.movieName + "," + this.showDnt;
+    }
 }

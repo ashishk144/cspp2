@@ -39,14 +39,14 @@ public class BookYourShow {
         System.out.println("Invalid");
     }
     public void showAll() {
-        System.out.println("Show array");
+        // System.out.println("Show array");
         for (int i = 0; i < size; i++) {
-            System.out.println(shows[i].name() + " " + shows[i].time() + " " + Arrays.toString(shows[i].seats()));
+            System.out.println(shows[i].name() + " " + shows[i].time() + " " + Arrays.toString(shows[i].seats()).replace(" ",""));
         }
-        System.out.println("Bookings");
-        for (int i = 0; i < bookSize; i++) {
-            System.out.println(bookings[i][0] + " " + bookings[i][1] + " " + bookings[i][2]);
-        }
+        // System.out.println("Bookings");
+        // for (int i = 0; i < bookSize; i++) {
+        //     System.out.println(bookings[i][0] + " " + bookings[i][1] + " " + bookings[i][2]);
+        // }
     }
     private boolean bookavailableSeat(String mov, String time, String[] seats) {
         for(int i = 0; i < size; i++) {
