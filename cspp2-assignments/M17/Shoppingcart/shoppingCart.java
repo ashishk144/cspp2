@@ -27,7 +27,6 @@ class ShoppingCart {
                                 if(items[i].quantity() >= item.quantity()) {
                                     cart[j].quantityinc(item.quantity());
                                     items[i].quantitydec(item.quantity());
-                                    cartsize++;
                                 }
                             }
                         }
@@ -39,7 +38,7 @@ class ShoppingCart {
                     if(items[i].name().equals(item.name())) {
                         if(items[i].quantity() >= item.quantity()) {
                             items[i].quantitydec(item.quantity());
-                            cartsize++;
+                            cart[cartsize++] = item;
                         }
                     }
                 }
@@ -49,7 +48,7 @@ class ShoppingCart {
                 if(items[i].name().equals(item.name())) {
                     if(items[i].quantity() >= item.quantity()) {
                         items[i].quantitydec(item.quantity());
-                        cartsize++;
+                            cart[cartsize++] = item;
                     }
                 }
             }
