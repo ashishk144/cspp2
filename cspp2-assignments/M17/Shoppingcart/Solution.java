@@ -5,7 +5,7 @@ class Solution {
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
         int count = 0;
-        while(count <= n) {
+        while(count < n) {
             count++;
             String line = scan.nextLine();
             String[] input = line.split(" ");
