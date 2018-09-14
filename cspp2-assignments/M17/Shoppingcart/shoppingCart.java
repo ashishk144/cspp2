@@ -6,6 +6,7 @@ class ShoppingCart {
     double percent, disc, tax;
     ShoppingCart() {
         items = new Item[20];
+        cart = new Item[20];
     }
     public void addToCatalog(Item item) {
         items[itemsize++] = item;
@@ -17,6 +18,7 @@ class ShoppingCart {
     }
     public void addToCart(Item item) {
         int flag = 0;
+        System.out.println("Entered add");
         if (itemsize > 0) {
             for (int i = 0; i < itemsize; i++) {
                 if(items[i].name().equals(item.name())) { 
@@ -27,6 +29,7 @@ class ShoppingCart {
                                 if(items[i].quantity() >= item.quantity()) {
                                     cart[j].quantityinc(item.quantity());
                                     items[i].quantitydec(item.quantity());
+                                    System.out.println("added in 1st");
                                 }
                             }
                         }
@@ -39,6 +42,8 @@ class ShoppingCart {
                         if(items[i].quantity() >= item.quantity()) {
                             items[i].quantitydec(item.quantity());
                             cart[cartsize++] = item;
+                            System.out.println("added in 2nd");
+
                         }
                     }
                 }
@@ -49,6 +54,7 @@ class ShoppingCart {
                     if(items[i].quantity() >= item.quantity()) {
                         items[i].quantitydec(item.quantity());
                             cart[cartsize++] = item;
+                            System.out.println("added in 3rd");
                     }
                 }
             }
@@ -64,7 +70,7 @@ class ShoppingCart {
     }
     public void showCart() {
         for (int i = 0; i < cartsize; i++) {
-            System.out.println(cart[i].toStrings() + getPrice(cart[i].name(), cart[i].quantity()));
+            System.out.println(cart[i].toStrings());
         }
     }
     public void removeFromCart (Item item) {

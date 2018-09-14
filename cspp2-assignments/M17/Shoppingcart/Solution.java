@@ -12,7 +12,7 @@ class Solution {
             switch(input[0]) {
                 case "Item":
                     String[] att = input[1].split(",");
-                    cart.addToCatalog(new Item(att[0],Integer.parseInt(att[1]),
+                    cart.addToCatalog(new Item(att[0], Integer.parseInt(att[1]),
                         Double.parseDouble(att[2])));
                     break;
                 case "catalog":
@@ -20,14 +20,14 @@ class Solution {
                     break;
                 case "add":
                     att = input[1].split(",");
-                    cart.addToCart(new Item(att[0],Integer.parseInt(att[1])));
+                    cart.addToCart(new Item(att[0],  Integer.parseInt(att[1])));
                     break;
                 case "show":
                     cart.showCart();
                     break;
                 case "remove":
                     att = input[1].split(",");
-                    cart.removeFromCart(new Item(att[0],Integer.parseInt(att[1])));
+                    cart.removeFromCart(new Item(att[0], Integer.parseInt(att[1])));
                     break;
                 case "totalAmount":
                     System.out.println("totalAmount:" + cart.getTotalAmount());
