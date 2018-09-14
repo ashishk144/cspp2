@@ -3,7 +3,7 @@ class ShoppingCart {
     int itemsize = 0;
     Item[] cart;
     int cartsize = 0;
-    double percent, disc, tax;
+    double percent = 0, disc, tax;
     ShoppingCart() {
         items = new Item[20];
         cart = new Item[20];
@@ -104,15 +104,11 @@ class ShoppingCart {
     public double applyCoupon(String coupon) {
         int c = 0; 
 ;       String[] coupons = {"IND10","IND20","IND30","IND40","IND50"};
-        if(c == 0) {
-            for (String coup: coupons) {
-                if (coup.equals(coupon)) {
-                    String[] couponcode = coupon.split("D");
-                    percent = Integer.parseInt(couponcode[1]) * 0.01;
-                    // System.out.println(percent);
-                    c++;
-                    return percent;
-                }
+        for (String coup: coupons) {
+            if (coup.equals(coupon)) {
+                String[] couponcode = coupon.split("D");
+                percent += Integer.parseInt(couponcode[1]) * 0.01;
+                return percent;
             }
         }
         System.out.println("Invalid Coupon");
