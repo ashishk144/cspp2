@@ -133,7 +133,7 @@ class ShoppingCart {
         for (int i = 0; i < cartsize; i++) {
             System.out.println(cart[i].toStrings()+" "+getPrice(cart[i].name()));
         }
-        System.out.println("Total: "+getTotalAmount());
+        System.out.println("Total:"+getTotalAmount());
         System.out.println("Disc%:"+disc);
         System.out.println("Tax:"+tax);
         System.out.println("Payable Amount: "+getPayableAmount());
