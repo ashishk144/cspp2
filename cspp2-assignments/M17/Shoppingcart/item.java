@@ -24,11 +24,11 @@ class Item {
     public double price() {
         return this.unitPrice;
     }
-    public int quantityinc(int incquan) {
-        return this.quantity+incquan;
+    public void quantityinc(int incquan) {
+        this.quantity += incquan;
     }
-    public int quantitydec(int decquan) {
-        return this.quantity-decquan;
+    public void quantitydec(int decquan) {
+        this.quantity -= decquan;
     }
     public String toStrings() {
         return this.productName + " " + this.quantity;

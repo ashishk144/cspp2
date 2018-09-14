@@ -115,14 +115,24 @@ class ShoppingCart {
     }
     public double getPayableAmount() {
         double total = getTotalAmount();
-        double disc = percent*total;
-        double tax = total * 0.15;
+        disc = percent*total;
+        tax = total * 0.15;
         total = total + tax - disc;
         return total;
     }
+    public double getPrice(String name) {
+        for (int i = 0; i < itemsize; i++) {
+            if(items[i].name().equals(name)) {
+                return (items[i].price());
+            }
+        }
+        return 0;
+    }
     public void printInvoice() {
         System.out.println("Name   Item   Quantity");
-        showCart();
+        for (int i = 0; i < cartsize; i++) {
+            System.out.println(cart[i].toStrings()+" "+getPrice(cart[i].name()));
+        }
         System.out.println("totalAmount: "+getTotalAmount());
         System.out.println("Disc%:"+disc);
         System.out.println("Tax:"+tax);
