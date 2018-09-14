@@ -54,7 +54,7 @@ final public class Solution {
                         + cart.getPayableAmount());
                     break;
                 case "coupon":
-                    cart.applyCoupon(input[1]);
+                System.out.println(cart.applyCoupon(input[1]));
                     break;
                 case "print":
                     cart.printInvoice();
