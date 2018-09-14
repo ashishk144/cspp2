@@ -116,8 +116,9 @@ class ShoppingCart {
     public double getPayableAmount() {
         double total = getTotalAmount();
         disc = percent*total;
+        total = total - disc;
         tax = total * 0.15;
-        total = total + tax - disc;
+        total = total + tax;
         return total;
     }
     public double getPrice(String name) {

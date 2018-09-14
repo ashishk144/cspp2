@@ -1,26 +1,41 @@
 import java.util.Scanner;
-class Solution {
-    public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         ShoppingCart cart = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
         int count = 0;
-        while(count < n) {
+        while (count < n) {
             count++;
             String line = scan.nextLine();
             String[] input = line.split(" ");
-            switch(input[0]) {
+            switch (input[0]) {
                 case "Item":
                     String[] att = input[1].split(",");
-                    cart.addToCatalog(new Item(att[0], Integer.parseInt(att[1]),
-                        Double.parseDouble(att[2])));
+                    cart.addToCatalog(new Item(att[0], Integer.parseInt(
+                        att[1]), Double.parseDouble(att[2])));
                     break;
                 case "catalog":
                     cart.showCatalog();
                     break;
                 case "add":
                     att = input[1].split(",");
-                    cart.addToCart(new Item(att[0],  Integer.parseInt(att[1])));
+                    cart.addToCart(new Item(att[0],  Integer.parseInt(
+                        att[1])));
                     break;
                 case "show":
                     cart.showCart();
