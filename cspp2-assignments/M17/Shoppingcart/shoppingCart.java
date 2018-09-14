@@ -106,7 +106,7 @@ class ShoppingCart {
         for (String coup: coupons) {
             if (coup.equals(coupon)) {
                 String[] couponcode = coupon.split("D");
-                double percent = Integer.parseInt(couponcode[1])/100;
+                percent = Integer.parseInt(couponcode[1])/100;
                 return percent;
             }
         }

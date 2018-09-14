@@ -42,13 +42,16 @@ final public class Solution {
                     break;
                 case "remove":
                     att = input[1].split(",");
-                    cart.removeFromCart(new Item(att[0], Integer.parseInt(att[1])));
+                    cart.removeFromCart(new Item(att[0],
+                        Integer.parseInt(att[1])));
                     break;
                 case "totalAmount":
-                    System.out.println("totalAmount: " + cart.getTotalAmount());
+                    System.out.println("totalAmount: " +
+                        cart.getTotalAmount());
                     break;
                 case "payableAmount":
-                    System.out.println("Payable amount: " + cart.getPayableAmount());
+                    System.out.println("Payable amount: " +
+                        cart.getPayableAmount());
                     break;
                 case "coupon":
                     cart.applyCoupon(input[1]);
