@@ -102,12 +102,16 @@ class ShoppingCart {
         return total;
     }
     public double applyCoupon(String coupon) {
-        String[] coupons = {"IND10","IND20","IND30","IND40"};
-        for (String coup: coupons) {
-            if (coup.equals(coupon)) {
-                String[] couponcode = coupon.split("D");
-                percent = Integer.parseInt(couponcode[1])/100;
-                return percent;
+        int c = 0; 
+;       String[] coupons = {"IND10","IND20","IND30","IND40","IND50"};
+        if(c == 0) {
+            for (String coup: coupons) {
+                if (coup.equals(coupon)) {
+                    String[] couponcode = coupon.split("D");
+                    percent = Integer.parseInt(couponcode[1])/100;
+                    c++;
+                    return percent;
+                }
             }
         }
         System.out.println("Invalid Coupon");
