@@ -112,7 +112,7 @@ public final class Solution {
                 score += questions[i].getScore();
             } else {
                 System.out.println(" Wrong Answer! - Penalty: " + questions[i].getPenalty());
-                score -= questions[i].getPenalty();
+                score += questions[i].getPenalty();
             }
         }
         System.out.println("Total Score: " + score);
