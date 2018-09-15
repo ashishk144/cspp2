@@ -1,26 +1,26 @@
 class Quiz {
 	String question;
 	String[] choices;
-	int correctchoice;
+	String correctchoice;
 	int maxmarks;
 	int penalty;
-	int answer;
+	String answer;
 	public Quiz() {
 	}
-	public Quiz(int ans) {
+	public Quiz(String ans) {
 		this.answer = ans;
 	}
-	public Quiz(String ques, String[] choices, int correctans, int max, int pen) {
+	public Quiz(String ques, String[] choices, String correctans, int max, int pen) {
 		this.question = ques;
 		this.choices = choices;
 		this.correctchoice = correctans;
 		this.maxmarks = max;
 		this.penalty = pen;
 	}
-	public int getCorrectchoice() {
+	public String getCorrectchoice() {
 		return this.correctchoice;
 	}
-	public int getAnswer() {
+	public String getAnswer() {
 		return this.answer;
 	}
 	public int getScore() {

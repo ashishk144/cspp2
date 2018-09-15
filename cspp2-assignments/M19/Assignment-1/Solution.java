@@ -84,9 +84,8 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String [] input = line.split(":");
-            Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(
-                input[2]), Integer.parseInt(input[3]), Integer.parseInt(
-                input[4]));
+            Quiz quiz = new Quiz(input[0], input[1].split(","), input[2],
+                Integer.parseInt(input[3]), Integer.parseInt(input[4]));
             questions[quizsize++] = quiz;
         }
         System.out.println(questionCount+" are added to the quiz");
@@ -107,7 +106,7 @@ public final class Solution {
             System.out.println();
             String line = s.nextLine();
             String[] ans = line.split(" ");
-            answers[answersize++] = new Quiz(Integer.parseInt(ans[1]));
+            answers[answersize++] = new Quiz(ans[1]);
         }
     }
 
@@ -119,7 +118,7 @@ public final class Solution {
         int score = 0;
         for (int i = 0; i < answersize; i++) {
             System.out.println(questions[i].getQuestion());
-            if (questions[i].getCorrectchoice() == answers[i].getAnswer()) {
+            if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
                 System.out.println(" Correct Answer! - Marks Awarded: "
                     + questions[i].getScore());
                 score += questions[i].getScore();
