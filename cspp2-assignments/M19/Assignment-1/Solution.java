@@ -7,7 +7,7 @@ public final class Solution {
     /**
      * magic number.
      */
-    static int Twenty = 20;
+    private static int Twenty = 20;
     /**.
      * { var_description }
      */
@@ -123,7 +123,7 @@ public final class Solution {
                     throw new Exception("Error! Malformed question");
                 }
             }
-            System.out.println(questionCount+" are added to the quiz");
+            System.out.println(questionCount + " are added to the quiz");
         } else {
             throw new Exception("Quiz does not have questions");
         }
@@ -149,7 +149,7 @@ public final class Solution {
         }
     }
 
-    /**
+    /**.
      * { function_description }
      */
     public static void displayScore() {
@@ -158,7 +158,8 @@ public final class Solution {
             int score = 0, c = 0;
             for (int i = 0; i < answersize; i++) {
                 System.out.println(questions[i].getQuestion());
-                if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
+                if (questions[i].getCorrectchoice().equals(
+                    answers[i].getAnswer())) {
                     System.out.println(" Correct Answer! - Marks Awarded: "
                         + questions[i].getScore());
                     score += questions[i].getScore();
