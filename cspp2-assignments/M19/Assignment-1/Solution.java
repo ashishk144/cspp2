@@ -35,7 +35,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws Exception {
          // instantiate this Quiz
         // Quiz q = new Quiz();
          // code to read the test cases input file
@@ -52,7 +52,11 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, Integer.parseInt(tokens[1]));
+                try {
+                    loadQuestions(s, Integer.parseInt(tokens[1]));
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -77,18 +81,23 @@ public final class Solution {
      * @param      s              { parameter_description }
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final int questionCount)
+    throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        for (int i = 0; i < questionCount; i++) {
-            String line = s.nextLine();
-            String [] input = line.split(":");
-            Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(input[2]),
-                Integer.parseInt(input[3]), Integer.parseInt(input[4]));
-            questions[quizsize++] = quiz;
+        if (questionCount > 0 ) {
+            for (int i = 0; i < questionCount; i++) {
+                String line = s.nextLine();
+                String [] input = line.split(":");
+                Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(input[2]),
+                    Integer.parseInt(input[3]), Integer.parseInt(input[4]));
+                questions[quizsize++] = quiz;
+            }
+            System.out.println(questionCount+" are added to the quiz");
+        } else {
+            throw new Exception("Quiz does not have questions");
         }
-        System.out.println(questionCount+" are added to the quiz");
     }
 
     /**
@@ -101,11 +110,13 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for (int i = 0; i < answerCount; i++) {
-            questions[i].printQuestion();
-            System.out.println();
-            String line = s.nextLine();
-            answers[answersize++] = new Quiz(line);
+        if (quizsize > answerCount) {
+            for (int i = 0; i < answerCount; i++) {
+                questions[i].printQuestion();
+                System.out.println();
+                String line = s.nextLine();
+                answers[answersize++] = new Quiz(line);
+            }
         }
     }
 
@@ -115,18 +126,20 @@ public final class Solution {
     public static void displayScore() {
         // write your code here to display the score report
         int score = 0;
-        for (int i = 0; i < answersize; i++) {
-            System.out.println(questions[i].getQuestion());
-            if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
-                System.out.println(" Correct Answer! - Marks Awarded: "
-                    + questions[i].getScore());
-                score += questions[i].getScore();
-            } else {
-                System.out.println(" Wrong Answer! - Penalty: "
-                    + questions[i].getPenalty());
-                score += questions[i].getPenalty();
+        if (quizsize > answersize) {
+            for (int i = 0; i < answersize; i++) {
+                System.out.println(questions[i].getQuestion());
+                if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                        + questions[i].getScore());
+                    score += questions[i].getScore();
+                } else {
+                    System.out.println(" Wrong Answer! - Penalty: "
+                        + questions[i].getPenalty());
+                    score += questions[i].getPenalty();
+                }
             }
+            System.out.println("Total Score: " + score);
         }
-        System.out.println("Total Score: " + score);
     }
 }
