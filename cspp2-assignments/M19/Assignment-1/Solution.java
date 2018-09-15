@@ -7,11 +7,11 @@ public final class Solution {
     /**
      * magic number.
      */
-    private static int Twenty = 20;
+    private static int twenTy = 20;
     /**.
      * { var_description }
      */
-    private static Quiz[] questions = new Quiz[Twenty];
+    private static Quiz[] questions = new Quiz[twenTy];
     /**.
      * { var_description }
      */
@@ -19,7 +19,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static Quiz[] answers = new Quiz[Twenty];
+    private static Quiz[] answers = new Quiz[twenTy];
     /**.
      * { var_description }
      */
