@@ -103,7 +103,7 @@ class ShoppingCart {
         return total;
     }
     public double applyCoupon(String coupon) {
-        String[] coupons = {"IND10","IND20","IND30","IND40","IND50"};
+        String[] coupons = {"IND10","IND20","IND30","IND50"};
         if (c==0) {
             for (String coup: coupons) {
                 if (coup.equals(coupon)) {
