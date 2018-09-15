@@ -90,18 +90,20 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (questionCount > 0 ) {
+        if (questionCount > 0) {
             for (int i = 0; i < questionCount; i++) {
                 String line = s.nextLine();
-                String [] input = line.split(":");
+                String[] input = line.split(":");
                 if (input.length == 5 && input[0].length() > 1) {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
-                            if(Integer.parseInt(input[3]) > 0) {
+                            if (Integer.parseInt(input[3]) > 0) {
                                 if (Integer.parseInt(input[4]) <= 0) {
-                                    Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
-                                        Integer.parseInt(input[3]), Integer.parseInt(input[4]));
+                                    Quiz quiz = new Quiz(input[0], choic,
+                                        Integer.parseInt(input[2]),
+                                        Integer.parseInt(input[3]),
+                                        Integer.parseInt(input[4]));
                                     questions[quizsize++] = quiz;
                                 } else {
                                     throw new Exception("Invalid penalty for " + input[0]);
@@ -110,10 +112,12 @@ public final class Solution {
                                 throw new Exception("Invalid max marks for " + input[0]);
                             }
                         } else {
-                            throw new Exception("Error! Correct answer choice number is out of range for " + input[0]);
+                            throw new Exception(
+                                "Error! Correct answer choice numbers is out of range for " + input[0]);
                         }
                     } else {
-                        throw new Exception(input[0]+" does not have enough answer choices");
+                        throw new Exception(input[0]
+                            + " does not have enough answer choices");
                     }
                 } else {
                     throw new Exception("Error! Malformed question");
