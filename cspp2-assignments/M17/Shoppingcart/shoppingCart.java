@@ -113,9 +113,11 @@ class ShoppingCart {
                     return percent;
                 }
             }
-        }
+        } else if (c==0) {
         System.out.println("Invalid Coupon");
         return 0;
+	    }
+	    return 0;
     }
     public double getPayableAmount() {
         double total = getTotalAmount();
