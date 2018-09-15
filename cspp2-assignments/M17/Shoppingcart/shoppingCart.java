@@ -103,6 +103,7 @@ class ShoppingCart {
         return total;
     }
     public double applyCoupon(String coupon) {
+    	int flag = 0;
         String[] coupons = {"IND10","IND20","IND30","IND50"};
         if (c==0) {
             for (String coup: coupons) {
@@ -110,13 +111,15 @@ class ShoppingCart {
                     String[] couponcode = coupon.split("D");
                     percent += Integer.parseInt(couponcode[1]) * 0.01;
                     c++;
+                    flag = 1;
                     return percent;
                 }
             }
-        } else if (c==0) {
-        System.out.println("Invalid Coupon");
-        return 0;
-	    }
+        }
+        if (flag == 0) {
+        	System.out.println("Invalid coupon");
+        	return 0;
+        }
 	    return 0;
     }
     public double getPayableAmount() {
