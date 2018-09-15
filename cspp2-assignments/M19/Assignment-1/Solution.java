@@ -4,13 +4,29 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
+    /**
+     * { var_description }
+     */
+    final static int twenty = 20;
+    /**
+     * { var_description }
+     */
+    private static Quiz[] questions = new Quiz[twenty];
+    /**
+     * { var_description }
+     */
+    private static int quizsize;
+    /**
+     * { var_description }
+     */
+    private static Quiz[] answers = new Quiz[twenty];
+    /**
+     * { var_description }
+     */
+    private static int answersize;
      /**
      * Constructs the object.
-     */
-    private static Quiz[] questions = new Quiz[20];
-    private static int quizsize;
-    private static Quiz[] answers = new Quiz[20];
-    private static int answersize;
+     **/
     private Solution() {
         // leave this blank
     }
@@ -58,8 +74,7 @@ public final class Solution {
     /**
      * Loads questions.
      *
-     * @param      s              The scanner object for user input
-     * @param      quiz           The quiz object
+     * @param      s              { parameter_description }
      * @param      questionCount  The question count
      */
     public static void loadQuestions(final Scanner s, final int questionCount) {
@@ -80,8 +95,7 @@ public final class Solution {
     /**
      * Starts a quiz.
      *
-     * @param      s            The scanner object for user input
-     * @param      quiz         The quiz object
+     * @param      s            { parameter_description }
      * @param      answerCount  The answer count
      */
     public static void startQuiz(final Scanner s, final int answerCount) {
@@ -98,20 +112,20 @@ public final class Solution {
     }
 
     /**
-     * Displays the score report
-     *final Quiz quiz
-     * @param      quiz     The quiz object
+     * { function_description }
      */
     public static void displayScore() {
         // write your code here to display the score report
         int score = 0;
         for (int i = 0; i < answersize; i++) {
             System.out.println(questions[i].getQuestion());
-            if(questions[i].getCorrectchoice() == answers[i].getAnswer()) {
-                System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].getScore());
+            if (questions[i].getCorrectchoice() == answers[i].getAnswer()) {
+                System.out.println(" Correct Answer! - Marks Awarded: "
+                    + questions[i].getScore());
                 score += questions[i].getScore();
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + questions[i].getPenalty());
+                System.out.println(" Wrong Answer! - Penalty: "
+                    + questions[i].getPenalty());
                 score += questions[i].getPenalty();
             }
         }
