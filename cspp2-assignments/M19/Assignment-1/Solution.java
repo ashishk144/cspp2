@@ -113,7 +113,7 @@ public final class Solution {
                             }
                         } else {
                             throw new Exception(
-                                "Error! Correct answer choice numbers is out of range for " + input[0]);
+                                "Error! Correct answer choice number is out of range for " + input[0]);
                         }
                     } else {
                         throw new Exception(input[0]
