@@ -7,14 +7,23 @@ public final class Solution {
     /**
      * magic number.
      */
-    final private static int twenTy = 20;
-    final private int three = 3;
-    final private int four = 4;
-    final private int five = 5;
+    final static int TWENTY = 20;
+    /**
+     * magic.
+     */
+    final static int THREE = 3;
+    /**
+     * magic.
+     */
+    final static int FOUR = 4;
+    /**
+     * magic.
+     */
+    final static int FIVE = 5;
     /**.
      * { var_description }
      */
-    private static Quiz[] questions = new Quiz[twenTy];
+    private static Quiz[] questions = new Quiz[TWENTY];
     /**.
      * { var_description }
      */
@@ -22,7 +31,7 @@ public final class Solution {
     /**.
      * { var_description }
      */
-    private static Quiz[] answers = new Quiz[twenTy];
+    private static Quiz[] answers = new Quiz[TWENTY];
     /**.
      * { var_description }
      */
