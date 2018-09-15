@@ -7,19 +7,19 @@ public final class Solution {
     /**
      * magic number.
      */
-    static int TWENTY = 20;
+    final static int TWENTY = 20;
     /**
      * magic.
      */
-    static int THREE = 3;
+    final static int THREE = 3;
     /**
      * magic.
      */
-    static int FOUR = 4;
+    final static int FOUR = 4;
     /**
      * magic.
      */
-    static int FIVE = 5;
+    final static int FIVE = 5;
     /**.
      * { var_description }
      */
