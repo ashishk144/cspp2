@@ -4,6 +4,7 @@ class ShoppingCart {
     Item[] cart;
     int cartsize = 0;
     double percent = 0, disc, tax;
+    int c = 0;
     ShoppingCart() {
         items = new Item[20];
         cart = new Item[20];
@@ -102,13 +103,15 @@ class ShoppingCart {
         return total;
     }
     public double applyCoupon(String coupon) {
-        int c = 0; 
-;       String[] coupons = {"IND10","IND20","IND30","IND40","IND50"};
-        for (String coup: coupons) {
-            if (coup.equals(coupon)) {
-                String[] couponcode = coupon.split("D");
-                percent += Integer.parseInt(couponcode[1]) * 0.01;
-                return percent;
+        String[] coupons = {"IND10","IND20","IND30","IND40","IND50"};
+        if (c==0) {
+            for (String coup: coupons) {
+                if (coup.equals(coupon)) {
+                    String[] couponcode = coupon.split("D");
+                    percent += Integer.parseInt(couponcode[1]) * 0.01;
+                    c++;
+                    return percent;
+                }
             }
         }
         System.out.println("Invalid Coupon");
