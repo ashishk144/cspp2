@@ -106,16 +106,16 @@ public final class Solution {
             for (int i = 0; i < questionCount; i++) {
                 String line = s.nextLine();
                 String[] input = line.split(":");
-                if (input.length == 5 && input[0].length() > 1) {
+                if (input.length == FIVE && input[0].length() > 1) {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
-                            if (Integer.parseInt(input[3]) > 0) {
-                                if (Integer.parseInt(input[4]) <= 0) {
+                            if (Integer.parseInt(input[THREE]) > 0) {
+                                if (Integer.parseInt(input[FOUR]) <= 0) {
                                     Quiz quiz = new Quiz(input[0], choic,
                                         Integer.parseInt(input[2]),
-                                        Integer.parseInt(input[3]),
-                                        Integer.parseInt(input[4]));
+                                        Integer.parseInt(input[THREE]),
+                                        Integer.parseInt(input[FOUR]));
                                     questions[quizsize++] = quiz;
                                 } else {
                                     throw new Exception("Invalid penalty for "
