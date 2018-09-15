@@ -7,10 +7,10 @@ public final class Solution {
      /**
      * Constructs the object.
      */
-    static Quiz[] questions = new Quiz[20];
-    static int quizsize;
-    static Quiz[] answers = new Quiz[20];
-    static int answersize;
+    private static Quiz[] questions = new Quiz[20];
+    private static int quizsize;
+    private static Quiz[] answers = new Quiz[20];
+    private static int answersize;
     private Solution() {
         // leave this blank
     }
@@ -21,7 +21,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
          // instantiate this Quiz
-        Quiz q = new Quiz();
+        // Quiz q = new Quiz();
          // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
@@ -36,13 +36,13 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                loadQuestions(s, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                startQuiz(s, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
@@ -62,14 +62,14 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String [] input = line.split(":");
-            quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(
+            Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(
                 input[2]), Integer.parseInt(input[3]), Integer.parseInt(
                 input[4]));
             questions[quizsize++] = quiz;
@@ -84,7 +84,7 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
