@@ -7,7 +7,10 @@ public final class Solution {
     /**
      * magic number.
      */
-    private static int twenTy = 20;
+    final private static int twenTy = 20;
+    final private int three = 3;
+    final private int four = 4;
+    final private int five = 5;
     /**.
      * { var_description }
      */
