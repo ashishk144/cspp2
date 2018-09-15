@@ -93,9 +93,13 @@ public final class Solution {
                 if (input.length == 5) {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
-                        Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
-                            Integer.parseInt(input[3]), Integer.parseInt(input[4]));
-                        questions[quizsize++] = quiz;
+                        if (Integer.parseInt(input[2]) <= choic.length) {
+                            Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
+                                Integer.parseInt(input[3]), Integer.parseInt(input[4]));
+                            questions[quizsize++] = quiz;
+                        } else {
+                            throw new Exception("Error! Correct answer choice number is out of range for " + input[0]);
+                        }
                     } else {
                         throw new Exception(input[0]+" does not have enough answer choices");
                     }
@@ -135,20 +139,24 @@ public final class Solution {
     public static void displayScore() {
         // write your code here to display the score report
         if (quizsize >= answersize) {
-            int score = 0;
+            int score = 0, c = 0;
             for (int i = 0; i < answersize; i++) {
                 System.out.println(questions[i].getQuestion());
                 if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
                     System.out.println(" Correct Answer! - Marks Awarded: "
                         + questions[i].getScore());
                     score += questions[i].getScore();
+                    c++;
                 } else {
                     System.out.println(" Wrong Answer! - Penalty: "
                         + questions[i].getPenalty());
                     score += questions[i].getPenalty();
+                    c++;
                 }
             }
-            System.out.println("Total Score: " + score);
+            if (c > 0) {
+                System.out.println("Total Score: " + score);
+            }
         }
     }
 }
