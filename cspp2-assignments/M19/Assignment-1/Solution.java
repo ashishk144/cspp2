@@ -119,7 +119,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (quizsize > answerCount) {
+        if (quizsize >= answerCount) {
             for (int i = 0; i < answerCount; i++) {
                 questions[i].printQuestion();
                 System.out.println();
@@ -134,7 +134,7 @@ public final class Solution {
      */
     public static void displayScore() {
         // write your code here to display the score report
-        if (quizsize > answersize) {
+        if (quizsize >= answersize) {
             int score = 0;
             for (int i = 0; i < answersize; i++) {
                 System.out.println(questions[i].getQuestion());
