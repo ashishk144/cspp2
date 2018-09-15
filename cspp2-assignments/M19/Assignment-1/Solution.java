@@ -100,10 +100,10 @@ public final class Solution {
                                         Integer.parseInt(input[3]), Integer.parseInt(input[4]));
                                     questions[quizsize++] = quiz;
                                 } else {
-                                    throw new Exception("Invalid Penalty for " + input[0]);
+                                    throw new Exception("Invalid penalty for " + input[0]);
                                 }
                             } else {
-                                throw new Exception("Invalid marks for question " + input[0]);
+                                throw new Exception("Invalid max marks for question " + input[0]);
                             }
                         } else {
                             throw new Exception("Error! Correct answer choice number is out of range for " + input[0]);
