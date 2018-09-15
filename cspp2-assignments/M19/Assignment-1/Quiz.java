@@ -18,7 +18,7 @@ class Quiz {
 		this.penalty = pen;
 	}
 	public String getCorrectchoice() {
-		return this.choices[this.correctchoice];
+		return this.choices[this.correctchoice - 1];
 	}
 	public String getAnswer() {
 		return this.answer;
