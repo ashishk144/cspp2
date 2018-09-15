@@ -110,13 +110,11 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (quizsize > answerCount) {
-            for (int i = 0; i < answerCount; i++) {
-                questions[i].printQuestion();
-                System.out.println();
-                String line = s.nextLine();
-                answers[answersize++] = new Quiz(line);
-            }
+        for (int i = 0; i < answerCount; i++) {
+            questions[i].printQuestion();
+            System.out.println();
+            String line = s.nextLine();
+            answers[answersize++] = new Quiz(line);
         }
     }
 
@@ -126,20 +124,18 @@ public final class Solution {
     public static void displayScore() {
         // write your code here to display the score report
         int score = 0;
-        if (quizsize > answersize) {
-            for (int i = 0; i < answersize; i++) {
-                System.out.println(questions[i].getQuestion());
-                if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
-                    System.out.println(" Correct Answer! - Marks Awarded: "
-                        + questions[i].getScore());
-                    score += questions[i].getScore();
-                } else {
-                    System.out.println(" Wrong Answer! - Penalty: "
-                        + questions[i].getPenalty());
-                    score += questions[i].getPenalty();
-                }
+        for (int i = 0; i < answersize; i++) {
+            System.out.println(questions[i].getQuestion());
+            if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
+                System.out.println(" Correct Answer! - Marks Awarded: "
+                    + questions[i].getScore());
+                score += questions[i].getScore();
+            } else {
+                System.out.println(" Wrong Answer! - Penalty: "
+                    + questions[i].getPenalty());
+                score += questions[i].getPenalty();
             }
-            System.out.println("Total Score: " + score);
         }
+        System.out.println("Total Score: " + score);
     }
 }
