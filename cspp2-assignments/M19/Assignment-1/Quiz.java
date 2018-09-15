@@ -1,7 +1,7 @@
 class Quiz {
 	String question;
 	String[] choices;
-	String correctchoice;
+	int correctchoice;
 	int maxmarks;
 	int penalty;
 	String answer;
@@ -10,7 +10,7 @@ class Quiz {
 	public Quiz(String ans) {
 		this.answer = ans;
 	}
-	public Quiz(String ques, String[] choices, String correctans, int max, int pen) {
+	public Quiz(String ques, String[] choices, int correctans, int max, int pen) {
 		this.question = ques;
 		this.choices = choices;
 		this.correctchoice = correctans;
@@ -18,7 +18,7 @@ class Quiz {
 		this.penalty = pen;
 	}
 	public String getCorrectchoice() {
-		return this.correctchoice;
+		return this.choices[this.correctchoice];
 	}
 	public String getAnswer() {
 		return this.answer;

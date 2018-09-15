@@ -84,7 +84,7 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String [] input = line.split(":");
-            Quiz quiz = new Quiz(input[0], input[1].split(","), input[2],
+            Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(input[2]),
                 Integer.parseInt(input[3]), Integer.parseInt(input[4]));
             questions[quizsize++] = quiz;
         }
