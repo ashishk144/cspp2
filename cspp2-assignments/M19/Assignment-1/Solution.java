@@ -105,8 +105,7 @@ public final class Solution {
             questions[i].printQuestion();
             System.out.println();
             String line = s.nextLine();
-            String[] ans = line.split(" ");
-            answers[answersize++] = new Quiz(ans[1]);
+            answers[answersize++] = new Quiz(line);
         }
     }
 
