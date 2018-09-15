@@ -90,9 +90,18 @@ public final class Solution {
             for (int i = 0; i < questionCount; i++) {
                 String line = s.nextLine();
                 String [] input = line.split(":");
-                Quiz quiz = new Quiz(input[0], input[1].split(","), Integer.parseInt(input[2]),
-                    Integer.parseInt(input[3]), Integer.parseInt(input[4]));
-                questions[quizsize++] = quiz;
+                if (input.length == 5) {
+                    String[] choic = input[1].split(",");
+                    if (choic.length > 1) {
+                        Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
+                            Integer.parseInt(input[3]), Integer.parseInt(input[4]));
+                        questions[quizsize++] = quiz;
+                    } else {
+                        throw new Exception(input[0]+" does not have enough answer choices");
+                    }
+                } else {
+                    throw new Exception("Error! Malformed question");
+                }
             }
             System.out.println(questionCount+" are added to the quiz");
         } else {
@@ -110,11 +119,13 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for (int i = 0; i < answerCount; i++) {
-            questions[i].printQuestion();
-            System.out.println();
-            String line = s.nextLine();
-            answers[answersize++] = new Quiz(line);
+        if (quizsize > answerCount) {
+            for (int i = 0; i < answerCount; i++) {
+                questions[i].printQuestion();
+                System.out.println();
+                String line = s.nextLine();
+                answers[answersize++] = new Quiz(line);
+            }
         }
     }
 
@@ -123,19 +134,21 @@ public final class Solution {
      */
     public static void displayScore() {
         // write your code here to display the score report
-        int score = 0;
-        for (int i = 0; i < answersize; i++) {
-            System.out.println(questions[i].getQuestion());
-            if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
-                System.out.println(" Correct Answer! - Marks Awarded: "
-                    + questions[i].getScore());
-                score += questions[i].getScore();
-            } else {
-                System.out.println(" Wrong Answer! - Penalty: "
-                    + questions[i].getPenalty());
-                score += questions[i].getPenalty();
+        if (quizsize > answersize) {
+            int score = 0;
+            for (int i = 0; i < answersize; i++) {
+                System.out.println(questions[i].getQuestion());
+                if (questions[i].getCorrectchoice().equals(answers[i].getAnswer())) {
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                        + questions[i].getScore());
+                    score += questions[i].getScore();
+                } else {
+                    System.out.println(" Wrong Answer! - Penalty: "
+                        + questions[i].getPenalty());
+                    score += questions[i].getPenalty();
+                }
             }
+            System.out.println("Total Score: " + score);
         }
-        System.out.println("Total Score: " + score);
     }
 }
