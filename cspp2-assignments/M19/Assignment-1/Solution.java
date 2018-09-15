@@ -90,7 +90,7 @@ public final class Solution {
             for (int i = 0; i < questionCount; i++) {
                 String line = s.nextLine();
                 String [] input = line.split(":");
-                if (input.length == 5) {
+                if (input.length == 5 && input[0].length() > 1) {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
