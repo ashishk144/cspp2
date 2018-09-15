@@ -5,22 +5,22 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
+     * magic number.
+     */
+    static int Twenty = 20;
+    /**.
      * { var_description }
      */
-    final static int twenty = 20;
-    /**
-     * { var_description }
-     */
-    private static Quiz[] questions = new Quiz[twenty];
-    /**
+    private static Quiz[] questions = new Quiz[Twenty];
+    /**.
      * { var_description }
      */
     private static int quizsize;
-    /**
+    /**.
      * { var_description }
      */
-    private static Quiz[] answers = new Quiz[twenty];
-    /**
+    private static Quiz[] answers = new Quiz[Twenty];
+    /**.
      * { var_description }
      */
     private static int answersize;
@@ -30,10 +30,12 @@ public final class Solution {
     private Solution() {
         // leave this blank
     }
-    /**
-     * main function to execute test cases.
+    /**.
+     * { function_description }
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
     public static void main(final String[] args) throws Exception {
          // instantiate this Quiz
@@ -80,6 +82,8 @@ public final class Solution {
      *
      * @param      s              { parameter_description }
      * @param      questionCount  The question count
+     *
+     * @throws     Exception      { exception_description }
      */
     public static void loadQuestions(final Scanner s, final int questionCount)
     throws Exception {
