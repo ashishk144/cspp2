@@ -106,14 +106,17 @@ public final class Solution {
                                         Integer.parseInt(input[4]));
                                     questions[quizsize++] = quiz;
                                 } else {
-                                    throw new Exception("Invalid penalty for " + input[0]);
+                                    throw new Exception("Invalid penalty for "
+                                        + input[0]);
                                 }
                             } else {
-                                throw new Exception("Invalid max marks for " + input[0]);
+                                throw new Exception(
+                                    "Invalid max marks for " + input[0]);
                             }
                         } else {
                             throw new Exception(
-                                "Error! Correct answer choice number is out of range for " + input[0]);
+                                "Error! Correct answer choice number"
+                                + " is out of range for " + input[0]);
                         }
                     } else {
                         throw new Exception(input[0]
