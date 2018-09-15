@@ -94,9 +94,17 @@ public final class Solution {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
-                            Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
-                                Integer.parseInt(input[3]), Integer.parseInt(input[4]));
-                            questions[quizsize++] = quiz;
+                            if(Integer.parseInt(input[3]) > 0) {
+                                if (Integer.parseInt(input[4]) <= 0) {
+                                    Quiz quiz = new Quiz(input[0], choic, Integer.parseInt(input[2]),
+                                        Integer.parseInt(input[3]), Integer.parseInt(input[4]));
+                                    questions[quizsize++] = quiz;
+                                } else {
+                                    throw new Exception("Invalid Penalty for " + input[0]);
+                                }
+                            } else {
+                                throw new Exception("Invalid marks for question " + input[0]);
+                            }
                         } else {
                             throw new Exception("Error! Correct answer choice number is out of range for " + input[0]);
                         }
