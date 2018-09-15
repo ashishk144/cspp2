@@ -116,9 +116,13 @@ class ShoppingCart {
                 }
             }
         }
-        if (flag == 0 && c == 1) {
-        	System.out.println("Invalid coupon");
-        	return 0;
+        if (flag == 0) {
+        	for (String coup: coupons) {
+                if (coup.equals(coupon)) {
+                } else {
+		        	System.out.println("Invalid coupon");
+		        	return 0;
+		        }
         }
 	    return 0;
     }
