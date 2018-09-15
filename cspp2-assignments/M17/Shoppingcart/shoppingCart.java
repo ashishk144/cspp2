@@ -118,7 +118,7 @@ class ShoppingCart {
         }
         if (flag == 0) {
         	System.out.println("Invalid coupon");
-        	flag = 0;
+        	flag = 1;
         	return 0;
         }
 	    return 0;
