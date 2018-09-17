@@ -131,8 +131,9 @@ class Question {
         // for (int i = 0; i < this.choices.length - 1; i++) {
         //     s += this.choices[i] + "\t";
         // } s += this.choices[this.choices.length - 1] + "\n";
-        return s = Arrays.toString(this.choices).replace(
-        	"[","").replace(",","\t");
+        s = Arrays.toString(this.choices).replace("[","").replace(
+        	"]","").replace(",","\t");
+        return s;
     }
 }
 /**
