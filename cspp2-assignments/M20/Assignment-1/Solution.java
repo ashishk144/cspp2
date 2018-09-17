@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -126,11 +127,12 @@ class Question {
      */
     public String toString() {
         String s = "";
-        s += getQuestionText() + "(" + getMaxMarks() + ")" + "\n";
-        for (int i = 0; i < this.choices.length - 1; i++) {
-            s += this.choices[i] + "\t";
-        } s += this.choices[this.choices.length - 1] + "\n";
-        return s;
+        // s += getQuestionText() + "(" + getMaxMarks() + ")" + "\n";
+        // for (int i = 0; i < this.choices.length - 1; i++) {
+        //     s += this.choices[i] + "\t";
+        // } s += this.choices[this.choices.length - 1] + "\n";
+        return s = Arrays.toString(this.choices).replace(
+        	"[","").replace(",","\t");
     }
 }
 /**
