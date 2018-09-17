@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -132,7 +132,7 @@ class Question {
             s += this.choices[i] + "\t";
         } s += this.choices[this.choices.length - 1] + "\n";
         // s = Arrays.toString(this.choices).replace("[","").replace(
-        	// "]","").replace(",","\t");
+        // "]","").replace(",","\t");
         return s;
     }
 }
