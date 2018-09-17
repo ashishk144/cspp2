@@ -58,10 +58,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        if (getCorrectAnswer().equals(choice)) {
-            return true;
-        }
-        return false;
+        return getCorrectAnswer().equals(choice);
     }
     /**
      * Gets the correct answer.
@@ -204,10 +201,14 @@ class Quiz {
         }
         return s;
     }
+    /**
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
         return this.size;
     }
-
 }
 /**
  * Solution class for code-eval.
@@ -220,14 +221,16 @@ public final class Solution {
         // leave this blank
     }
     /**
-     * main function to execute test cases.
+     * Main function.
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
     public static void main(final String[] args) throws Exception {
-         // instantiate this Quiz
+        // instantiate this Quiz
         Quiz q = new Quiz();
-         // code to read the test cases input file
+        // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
         while (s.hasNext()) {
@@ -242,7 +245,7 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 try {
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                    loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
@@ -269,28 +272,32 @@ public final class Solution {
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int THREE = 3;
+        final int FOUR = 4;
+        final int FIVE = 5;
         if (q > 0) {
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] input = line.split(":");
-                if (input.length == 5 && input[0].length() > 1) {
+                if (input.length == FIVE && input[0].length() > 1) {
                     String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
-                            if (Integer.parseInt(input[3]) > 0) {
-                                if (Integer.parseInt(input[4]) <= 0) {
+                            if (Integer.parseInt(input[THREE]) > 0) {
+                                if (Integer.parseInt(input[FOUR]) <= 0) {
                                     quiz.addQuestion(new Question(input[0],
                                         choic, Integer.parseInt(input[2]),
-                                        Integer.parseInt(input[3]),
-                                        Integer.parseInt(input[4])));
+                                        Integer.parseInt(input[THREE]),
+                                        Integer.parseInt(input[FOUR])));
                                 } else {
                                     throw new Exception("Invalid penalty for "
                                         + input[0]);
