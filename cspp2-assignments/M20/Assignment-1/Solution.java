@@ -131,7 +131,7 @@ class Question {
         String s = "";
         s += getQuestionText() + "(" + getMaxMarks() + ")\n";
         for (int i = 0; i < this.choices.length - 1; i++) {
-            s += this.choices[i] + "  ";
+            s += this.choices[i] + "        ";
         } s += this.choices[this.choices.length - 1] + "\n";
         return s;
     }
