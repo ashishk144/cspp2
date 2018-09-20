@@ -1,0 +1,11 @@
+food bread 200 9:00A.M.
+water 100 9:15A.M.
+physicalactivity running 18/09/2018 9:30A.M. 10:00A.M. Ran:2:miles
+weight 80 40 18/09/2018
+sleep 18/09/2018,9:30P.M. 19/09/2018,6:30A.M.
+foodlog
+waterlog
+physicalactivitylog
+weightlog
+sleeplog
+summary
