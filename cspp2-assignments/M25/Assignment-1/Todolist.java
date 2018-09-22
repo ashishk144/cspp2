@@ -52,7 +52,9 @@ class Todolist {
     public int totalTime4Completion() {
         int totaltime = 0;
         for(int i = 0; i < size; i++) {
-            totaltime += tasks[i].getTime();
+            if (tasks[i].getStatus().equals("todo")) {
+                totaltime += tasks[i].getTime();
+            }
         }
         return totaltime;
     }
