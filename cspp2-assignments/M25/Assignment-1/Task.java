@@ -18,7 +18,7 @@ class Task {
         if (mins > 0) {
             this.time = mins;
         } else {
-            throw new Exception("Invalid time TimeToComplete " + mins);
+            throw new Exception("Invalid timeToComplete " + mins);
         }
         this.importance = imp;
         this.urgency = urge;
