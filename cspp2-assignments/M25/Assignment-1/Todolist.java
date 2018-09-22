@@ -24,7 +24,7 @@ class Todolist {
     }
     public Task getNextTask(String name) {
         for (int i = 0; i < size; i++) {
-            if (tasks[i].getName().equals(name)) {
+            if (tasks[i].getName().equals(name) && tasks[i].getStatus().equals("todo")) {
                 if (tasks[i].getImportance() && (!(tasks[i].getUrge()))) {
                     return tasks[i];
                 }
