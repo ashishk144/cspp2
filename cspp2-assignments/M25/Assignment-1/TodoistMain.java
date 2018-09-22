@@ -11,19 +11,19 @@ import java.util.Arrays;
 
 
 final class TodoistMain {
-    /**
+    /**.
      * { var_description }
      */
     private static final int THREE = 3;
-    /**
+    /**.
      * { var_description }
      */
     private static final int FOUR = 4;
-    /**
+    /**.
      * { var_description }
      */
     private static final int FIVE = 5;
-    /**
+    /**.
      * { var_description }
      */
     private static final int SIX = 6;
