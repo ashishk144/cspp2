@@ -44,7 +44,7 @@ class Todolist {
         int newsize = 0;
         for(int i = 0; i < size; i++) {
             if (tasks[i].getName().equals(name)) {
-                if(newsize <= number) {
+                if(newsize < number) {
                     newtasks[newsize++] = tasks[i];
                 }
             }
