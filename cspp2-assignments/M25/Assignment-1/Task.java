@@ -48,7 +48,7 @@ class Task {
     }
     public String toString() {
         String s ="";
-        s += this.title + ", " + this.name + ", " + this.time;
+        s += this.title + ", " + this.name + ", " + this.time + ", ";
         if (getImportance()) {
             s += "Important" + ", ";
         } else {
