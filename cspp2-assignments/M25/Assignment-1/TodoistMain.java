@@ -10,14 +10,29 @@ import java.util.Arrays;
  */
 
 
-public class TodoistMain {
-	private static final int THREE = 3;
-	private static final int FOUR = 4;
-	private static final int FIVE = 5;
-	private static final int SIX = 6;
-	private TodoistMain() {
+final class TodoistMain {
+    /**
+     * { var_description }
+     */
+    private static final int THREE = 3;
+    /**
+     * { var_description }
+     */
+    private static final int FOUR = 4;
+    /**
+     * { var_description }
+     */
+    private static final int FIVE = 5;
+    /**
+     * { var_description }
+     */
+    private static final int SIX = 6;
+    /**
+     * Constructs the object.
+     */
+    private TodoistMain() {
 
-	}
+    }
 
     /**
      * Starts a test.
