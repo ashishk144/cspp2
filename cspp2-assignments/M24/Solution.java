@@ -69,7 +69,6 @@ class Longest {
         return news2;
     }
     public int repeatCount(String str, String compare) {
-        System.out.println(str + " " + compare);
         int c = 0;
         for (int i = 0; i < str.length(); i++) {
             String str1 = "";
