@@ -8,20 +8,20 @@ class Out {
       public String outputPrint(String foldername) throws Exception {
             File folder = new File(foldername);
             File[] allfiles = folder.listFiles();
-            String s = "", s1 = "               ", s2 = "";
+            String s = "", s1 = "\t", s2 = "";
             Longest l = new Longest();
             Load f = new Load();
             double max = 0, sim = 0;
             String fil1 = "", fil2 = "";
             for (File fil : allfiles) {
-                  s1 += fil.getName() + " ";
+                  s1 += fil.getName() + "\t";
             } s1 += "\n";
             if (allfiles.length > 0) {
                   for (File file1 : allfiles) {
-                        s += file1.getName() + "      ";
+                        s += file1.getName() + "\t";
                         for (File file2 : allfiles) {
                               sim = l.similarity(f.loadString(file1), f.loadString(file2));
-                              s += sim + "            ";
+                              s += sim + "\t\t";
                               if (sim > max && sim!=100) {
                                     max = sim;
                                     fil1 = file1.getName();
