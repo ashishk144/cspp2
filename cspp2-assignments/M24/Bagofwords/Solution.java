@@ -123,7 +123,7 @@ class Solution {
                 System.out.println("empty directory");
             }
         } else {
-            System.out.println("Empty Directory");
+            System.out.println("empty directory");
         }
         // Inpfromfolder i = new Inpfromfolder();
         // ArrayList<String> filenames= i.listFilesForFolder(folder);
