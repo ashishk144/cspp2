@@ -28,7 +28,7 @@ class Out {
 			System.out.println("Empty Directory");
 		}
 		s2 = s1 + s;
-		return s;
+		return s2;
 	}
 }
 
