@@ -112,7 +112,7 @@ class Solution {
         if (allfiles.length != 0) {
             // System.out.println("Entered if");
             for (File file1 : allfiles) {
-                s += file1.getName() + "\t";
+                s += file1.getName() + "\t\t";
                 for (File file2 : allfiles) {
                     Frequency f = new Frequency();
                     Distance d = new Distance();
