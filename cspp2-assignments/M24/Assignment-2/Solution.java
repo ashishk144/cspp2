@@ -30,12 +30,12 @@ class Out {
                         }
                         s = s.trim();
                         s += "\n";
-                        s += "Maximum similarity is between " + fil1 + " and " + fil2;
                   }
                   // System.out.println(s);
             } else {
                   System.out.println("Empty Directory");
             }
+            s += "Maximum similarity is between " + fil1 + " and " + fil2;
             s2 = s1 + s;
             return s2;
       }
