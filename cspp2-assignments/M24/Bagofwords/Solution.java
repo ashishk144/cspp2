@@ -129,7 +129,7 @@ class Solution {
         // ArrayList<String> filenames= i.listFilesForFolder(folder);
         // System.out.println(folder);
         // System.out.println(Arrays.toString(allfiles));
-        
+
         // f.loadWordstodict(filename1);
         // f.loadWordstodict(filename2);
     }
