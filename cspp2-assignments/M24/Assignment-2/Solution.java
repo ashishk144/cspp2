@@ -8,7 +8,7 @@ class Out {
       public String outputPrint(String foldername) throws Exception {
             File folder = new File(foldername);
             File[] allfiles = folder.listFiles();
-            String s = "", s1 = "\t", s2 = "";
+            String s = "", s1 = "\t\t", s2 = "";
             Longest l = new Longest();
             Load f = new Load();
             double max = 0, sim = 0;
@@ -18,7 +18,7 @@ class Out {
             } s1 += "\n";
             if (allfiles.length > 0) {
                   for (File file1 : allfiles) {
-                        s += file1.getName() + "\t";
+                        s += file1.getName() + "\t\t";
                         for (File file2 : allfiles) {
                               sim = l.similarity(f.loadString(file1), f.loadString(file2));
                               s += sim + "\t";
