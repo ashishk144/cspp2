@@ -8,7 +8,7 @@ class Out {
       public String outputPrint(String foldername) throws Exception {
             File folder = new File(foldername);
             File[] allfiles = folder.listFiles();
-            String s = "", s1 = "\t\t", s2 = "";
+            String s = "", s1 = "\t", s2 = "";
             Longest l = new Longest();
             Load f = new Load();
             double max = 0, sim = 0;
