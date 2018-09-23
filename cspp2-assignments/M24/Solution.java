@@ -14,19 +14,21 @@ class Out {
         for (File fil : allfiles) {
             s1 += fil.getName() + "\t";
         } s1 += "\n";
+        System.out.println(allfiles.length);
         if (allfiles.length > 0) {
             for (File file1 : allfiles) {
-                s += file1.getName() + "\t\t";
+                s += file1.getName() + "\t";
                 for (File file2 : allfiles) {
-                    s += l.similarity(f.loadString(file1), f.loadString(file2)) + "\t";
+                    s += l.similarity(f.loadString(file1), f.loadString(file2)) + "\t\t";
                 }
                 s = s.trim();
                 s += "\n";
             }
             // System.out.println(s);
         } else {
-            System.out.println("empty directory");
+            System.out.println("Empty Directory");
         }
+        s2 = s + s1;
         return s;
     }
 }
@@ -102,8 +104,12 @@ class Solution {
     }
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        String foldername = scan.nextLine();
-        Out lines = new Out();
-        System.out.println(lines.outputPrint(foldername));
+        if (scan.hasNextLine()) {
+	        String foldername = scan.nextLine();
+	        Out lines = new Out();
+	        System.out.println(lines.outputPrint(foldername));
+        } else {
+        	System.out.println("Empty Directory");
+        }
     }
 }
