@@ -8,17 +8,17 @@ class Out {
 	public String outputPrint(String foldername) throws Exception {
 		File folder = new File(foldername);
 		File[] allfiles = folder.listFiles();
-		String s = "", s1 = "\t\t", s2 = "";
+		String s = "", s1 = "		", s2 = "";
 		Longest l = new Longest();
 		Load f = new Load();
 		for (File fil : allfiles) {
-			s1 += fil.getName() + "\t";
+			s1 += fil.getName() + "		";
 		} s1 += "\n";
 		if (allfiles.length > 0) {
 			for (File file1 : allfiles) {
-				s += file1.getName() + "\t\t";
+				s += file1.getName() + "		";
 				for (File file2 : allfiles) {
-					s += l.similarity(f.loadString(file1), f.loadString(file2)) + "\t";
+					s += l.similarity(f.loadString(file1), f.loadString(file2)) + "		";
 				}
 				s = s.trim();
 				s += "\n";
