@@ -14,14 +14,14 @@ class Out {
             double max = 0, sim = 0;
             String fil1 = "", fil2 = "";
             for (File fil : allfiles) {
-                  s1 += fil.getName() + "\t";
+                  s1 += fil.getName() + "    ";
             } s1 += "\n";
             if (allfiles.length > 0) {
                   for (File file1 : allfiles) {
-                        s += file1.getName() + "\t";
+                        s += file1.getName() + "   ";
                         for (File file2 : allfiles) {
                               sim = l.similarity(f.loadString(file1), f.loadString(file2));
-                              s += sim + "            ";
+                              s += sim + "        ";
                               if (sim > max && sim != 100) {
                                     max = sim;
                                     fil1 = file1.getName();
