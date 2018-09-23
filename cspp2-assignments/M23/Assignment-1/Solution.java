@@ -96,9 +96,10 @@ class Solution {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         String foldername = scan.nextLine();
-        Inpfromfolder i = new Inpfromfolder();
+        // Inpfromfolder i = new Inpfromfolder();
         final File folder = new File(foldername);
         // ArrayList<String> filenames= i.listFilesForFolder(folder);
+        // System.out.println(folder);
         File[] allfiles = folder.listFiles();
         // System.out.println(Arrays.toString(allfiles));
         String s = "\t";
