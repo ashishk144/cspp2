@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 class Question {
     /**
-     * { var_description }.
+     * auestion.
      */
     private String questiontext;
     /**
