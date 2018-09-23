@@ -22,7 +22,7 @@ class Out {
                         for (File file2 : allfiles) {
                               sim = l.similarity(f.loadString(file1), f.loadString(file2));
                               s += sim + "\t";
-                              if (sim > max) {
+                              if (sim > max && sim!=100) {
                                     max = sim;
                                     fil1 = file1.getName();
                                     fil2 = file2.getName();
