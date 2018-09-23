@@ -95,36 +95,41 @@ class Solution {
     }
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        String foldername = scan.nextLine();
+        if (scan.hasNext()) {
+            String foldername = scan.nextLine();
+            final File folder = new File(foldername);
+            File[] allfiles = folder.listFiles();
+            String s = "\t\t";
+            for (File fil : allfiles) {
+                s += fil.getName() + "\t";
+            }
+            // s = s.trim();
+            // s = s.substring(0, s.length()-4);
+            s += "\n";
+            if (allfiles.length != 0) {
+                // System.out.println("Entered if");
+                for (File file1 : allfiles) {
+                    s += file1.getName() + "\t\t";
+                    for (File file2 : allfiles) {
+                        Frequency f = new Frequency();
+                        Distance d = new Distance();
+                        s += d.similarity(f.loadWordstodict(file1), f.loadWordstodict(file2)) + "\t\t";
+                    }
+                    // s = s.trim();
+                    s += "\n";
+                }
+                System.out.println(s);
+            } else {
+                System.out.println("empty directory");
+            }
+        } else {
+            System.out.println("Empty Directory");
+        }
         // Inpfromfolder i = new Inpfromfolder();
-        final File folder = new File(foldername);
         // ArrayList<String> filenames= i.listFilesForFolder(folder);
         // System.out.println(folder);
-        File[] allfiles = folder.listFiles();
         // System.out.println(Arrays.toString(allfiles));
-        String s = "\t\t";
-        for (File fil : allfiles) {
-            s += fil.getName() + "\t";
-        }
-        // s = s.trim();
-        // s = s.substring(0, s.length()-4);
-        s += "\n";
-        if (allfiles.length != 0) {
-            // System.out.println("Entered if");
-            for (File file1 : allfiles) {
-                s += file1.getName() + "\t\t";
-                for (File file2 : allfiles) {
-                    Frequency f = new Frequency();
-                    Distance d = new Distance();
-                    s += d.similarity(f.loadWordstodict(file1), f.loadWordstodict(file2)) + "" + "\t";
-                }
-                // s = s.trim();
-                s += "\n";
-            }
-            System.out.println(s);
-        } else {
-            System.out.println("empty directory");
-        }
+        
         // f.loadWordstodict(filename1);
         // f.loadWordstodict(filename2);
     }
