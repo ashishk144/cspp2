@@ -14,7 +14,6 @@ class Out {
         for (File fil : allfiles) {
             s1 += fil.getName() + "\t";
         } s1 += "\n";
-        System.out.println(allfiles.length);
         if (allfiles.length > 0) {
             for (File file1 : allfiles) {
                 s += file1.getName() + "\t";
