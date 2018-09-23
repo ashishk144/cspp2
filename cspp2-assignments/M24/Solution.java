@@ -6,28 +6,28 @@ class Out {
 
     }
     public String outputPrint(String foldername) throws Exception {
-    File folder = new File(foldername);
-    File[] allfiles = folder.listFiles();
-    String s= "", s1 = "\t", s2="";
-    Longest l = new Longest();
-    Load f = new Load();    
-    for (File fil: allfiles) {
+        File folder = new File(foldername);
+        File[] allfiles = folder.listFiles();
+        String s = "", s1 = "\t", s2 = "";
+        Longest l = new Longest();
+        Load f = new Load();
+        for (File fil : allfiles) {
             s1 += fil.getName() + "\t";
         } s1 += "\n";
-    if (allfiles.length > 0) {
-        for (File file1: allfiles) {
-            s += file1.getName() + "\t\t";
-            for (File file2: allfiles) {
-                s += l.similarity(f.loadString(file1), f.loadString(file2)) + "\t";
+        if (allfiles.length > 0) {
+            for (File file1 : allfiles) {
+                s += file1.getName() + "\t\t";
+                for (File file2 : allfiles) {
+                    s += l.similarity(f.loadString(file1), f.loadString(file2)) + "\t";
+                }
+                s = s.trim();
+                s += "\n";
             }
-            s = s.trim();
-            s += "\n";
+            // System.out.println(s);
+        } else {
+            System.out.println("empty directory");
         }
-        // System.out.println(s);
-    } else {
-        System.out.println("empty directory");
-    }
-    return s;
+        return s;
     }
 }
 
@@ -42,9 +42,9 @@ class Load {
         } catch (Exception e) {
         }
         String store = "";
-        while(scan.hasNextLine()) {
+        while (scan.hasNextLine()) {
             String s = scan.nextLine();
-            store += s.replaceAll("[^a-z A-Z 0-9 _]","").toLowerCase();
+            store += s.replaceAll("[^a-z A-Z 0-9 _]", "").toLowerCase();
         }
         return store;
     }
@@ -59,7 +59,7 @@ class Longest {
         for (int i = 0; i < s2.length(); i++) {
             for (int j = i + 1; j <= s2.length(); j++) {
                 news1 = s2.substring(i, j);
-                if(s1.contains(news1)) {
+                if (s1.contains(news1)) {
                     if (news1.length() > news2.length()) {
                         news2 = news1;
                     }
@@ -88,10 +88,10 @@ class Longest {
         double count2 = repeatCount(string2, longeststring);
         double fileslength = string1.length() + string2.length();
         double sim;
-        if (fileslength > 0){
-	        sim = ((count1+count2)*longeststring.length())/fileslength;
+        if (fileslength > 0) {
+            sim = ((count1 + count2) * longeststring.length()) / fileslength;
         } else {
-        	return 100;
+            return 100;
         }
         return Math.round((sim * 100));
     }
@@ -104,6 +104,6 @@ class Solution {
         Scanner scan = new Scanner(System.in);
         String foldername = scan.nextLine();
         Out lines = new Out();
-        System.out.println(lines.outputPrint(foldername));        
+        System.out.println(lines.outputPrint(foldername));
     }
 }
